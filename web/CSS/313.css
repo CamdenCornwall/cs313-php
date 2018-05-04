@@ -1,0 +1,26 @@
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    background-color: BLACK; 
+    padding-bottom: 7px;
+    padding-top: 7px;
+   
+}
+#nav a{
+    margin-top: 15px;
+    margin-left: 5px;
+    font-family: "Arial";
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #cceecc;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 25px;
+    
+}
+#nav a:hover{
+    color: #ccee77; 
+    background-color: #667766;
+    
+}
