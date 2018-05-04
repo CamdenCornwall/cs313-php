@@ -24,12 +24,14 @@
     background-color: #667766;
     
 }
-
+body{
+    background-color: #02003c;  
+}
 main {
     margin: 5%;
     font-family: "Arial";
     color: #cceecc;
-    background-color: #02003c;
+
 }
 
 
