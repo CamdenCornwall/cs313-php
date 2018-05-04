@@ -26,9 +26,11 @@
 }
 body{
     background-color: #02003c;  
+    margin: 0;
 }
 main {
-    margin: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     font-family: "Arial";
     color: #cceecc;
 
