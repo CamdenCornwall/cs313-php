@@ -25,7 +25,7 @@
     
 }
 
-body {
+main {
     color: blue;
 }
 
@@ -38,7 +38,7 @@ body {
     background-color: black;  
 }
 #footer p{
-    color: white;
+    color: #ffffff;
     text-align: center;
 }
 /*#footer a{
