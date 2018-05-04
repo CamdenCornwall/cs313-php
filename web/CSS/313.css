@@ -51,6 +51,9 @@ p a {
     color: #cceecc;
 }
 
+ul li {
+    padding: 2%;
+}
 ul li a {
     color: #cceecc;
     font-size: 1.1em;
