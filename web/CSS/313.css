@@ -32,12 +32,14 @@
 
 
 
-
+#footer {
+    background-color: #667766;  
+}
 #footer p{
-    background-color: #667766;
+
     text-align: center;
 }
-#footer a{
+/*#footer a{
     margin-left: 10px;
     font-family: "Arial";
     font-size: 1.3em;
@@ -49,4 +51,4 @@
 #footer a:hover{
     color: #ccee77; 
     background-color: #667766;
-}
+}*/
