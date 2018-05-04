@@ -24,3 +24,29 @@
     background-color: #667766;
     
 }
+
+
+
+
+
+
+
+
+
+#footer p{
+
+    text-align: center;
+}
+#footer a{
+    margin-left: 10px;
+    font-family: "Arial";
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #cceecc;
+    padding: 20px;
+    border-radius: 25px;
+}
+#footer a:hover{
+    color: #ccee77; 
+    background-color: #667766;
+}
