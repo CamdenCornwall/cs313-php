@@ -19,7 +19,9 @@ and open the template in the editor.
         
         <main>
             <h1>Assignments</h1>
-            <a href="assignments/index.php?action=hello" title="to Hello">Hello</a>
+            <ul>
+                <li><a href="assignments/index.php?action=hello" title="to Hello">Hello</a></li>
+            </ul>
         </main>
         
         <?php include("HeadandFoot/footer.php"); ?>
