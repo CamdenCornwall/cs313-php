@@ -19,7 +19,7 @@ if($action == NULL){
 switch ($action) {
     
   case 'assignm':
-     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/indexA.php');
+     include ($_SERVER['DOCUMENT_ROOT'].'/indexA.php');
      break;
  
    case 'hello':
