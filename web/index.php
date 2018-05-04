@@ -1,4 +1,26 @@
-       
+<html>
+    <head>
+        <title>Camden's Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+         <link rel="icon" href="http://d8dt.com/favicon.ico" type="image/x-icon" />
+         
+         <link href="DateCSS/datestyle.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    
+    <body>
+        <?php include("HeadandFoot/header.php"); ?>
+        
+        <main>
+        <?php include("views/content/Home-content.php"); ?>
+        </main>
+        
+        <?php include("HeadandFoot/footer.php"); ?>
+    </body>
+</html>
+
 <?php
 /**
 * MAIN HOME INDEX
@@ -10,58 +32,22 @@ if($action == NULL){
  $action = 'home';
 }
 if($action == NULL){
- $action = 'D8DThere';
+ $action = 'assignm';
 }
-if($action == NULL){
- $action = 'togetherGames';
-}
-if($action == NULL){
- $action = 'ListFreeGames';
-}
-if($action == NULL){
- $action = 'contactUs';
-}
-if($action == NULL){
- $action = 'fun-Apps';
-}
+
 
 }
 
 switch ($action) {
     
  case 'home':
-  include ($_SERVER['DOCUMENT_ROOT'].'/DateGame/views/Home.php');
+  include ($_SERVER['DOCUMENT_ROOT'].'/web/index.php');
 break;
  
   case 'D8DThere':
-     include ($_SERVER['DOCUMENT_ROOT'].'/DateGame/views/D8DTgameList/index.php');
-     break;
-
-  case 'OtherHere':
-     include ($_SERVER['DOCUMENT_ROOT'].'/DateGame/views/OthergameList/index.php');
-     break;
- 
-   case 'ListFreeGames':
-     include ($_SERVER['DOCUMENT_ROOT'].'/DateGame/views/SetupEmu/index.php');
-     break;
- 
-   case 'contactUs':
-     include ($_SERVER['DOCUMENT_ROOT'].'/DinoApp/XcontactUs.php');
-     break;
- 
-   case 'fun-Apps':
-     include ($_SERVER['DOCUMENT_ROOT'].'/DinoApp/Xindex.php');
+     include ($_SERVER['DOCUMENT_ROOT'].'/web/assignments/indexA.php');
      break;
  
 }
 
 ?>
-        
-        
-
-        
-        <div></div>
-    </body>
-</html>
-
-
