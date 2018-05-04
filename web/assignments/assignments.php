@@ -19,7 +19,7 @@ and open the template in the editor.
         
         <main>
             <h1>Assignments</h1>
-            <a href="/indexA.php?action=hello" title="to Hello">Hello</a>
+            <a href="/index.php?action=hello" title="to Hello">Hello</a>
         </main>
         
         <?php include("HeadandFoot/footer.php"); ?>
