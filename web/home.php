@@ -14,7 +14,8 @@
         <?php include("HeadandFoot/header.php"); ?>
         
         <main>
-            
+            <h1>About Camden</h1>
+            <p>Hello</p>
         </main>
         
         <?php include("HeadandFoot/footer.php"); ?>
