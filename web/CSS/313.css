@@ -33,10 +33,10 @@
 
 
 #footer {
-    background-color: #667766;  
+    background-color: black;  
 }
 #footer p{
-
+    color: #667766;
     text-align: center;
 }
 /*#footer a{
