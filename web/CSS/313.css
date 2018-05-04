@@ -1,4 +1,12 @@
+#logo {
+    display:flex;
+    /*max-height: 96px;*/
+    max-width: 123px;
+    margin: 0;
+    margin-left: 5px;
+    margin-right: -20px;
 
+}
 #nav{
     display: flex;
     flex-direction: row;
