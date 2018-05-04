@@ -1,7 +1,7 @@
 
 <?php
 /**
-* MAIN HOME INDEX
+* INDEX of ASSIGMNETS!!!!!!!!!!!!!!!!!!!!!
 */
  $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){
@@ -11,6 +11,9 @@ if($action == NULL){
 }
 if($action == NULL){
  $action = 'hello';
+}
+if($action == NULL){
+ $action = '02';
 }
 
 
@@ -24,6 +27,10 @@ switch ($action) {
  
    case 'hello':
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/hello.html');
+     break;
+ 
+    case '02':
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/T-02-313.html');
      break;
  
 }

@@ -20,7 +20,8 @@ and open the template in the editor.
         <main>
             <h1>Assignments</h1>
             <ul>
-                <li><a href="assignments/index.php?action=hello" title="to Hello">Hello</a></li>
+                <li><a href="assignments/index.php?action=hello" title="to Hello">Hello</a> 01</li>
+                <li><a href="assignments/index.php?action=02" title="to Hello">Basics</a> 02</li>
             </ul>
         </main>
         
