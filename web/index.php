@@ -41,11 +41,11 @@ if($action == NULL){
 switch ($action) {
     
  case 'home':
-  include ($_SERVER['DOCUMENT_ROOT'].'/web/index.php');
+  include ($_SERVER['DOCUMENT_ROOT'].'/index.php');
 break;
  
   case 'D8DThere':
-     include ($_SERVER['DOCUMENT_ROOT'].'/web/assignments/indexA.php');
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/indexA.php');
      break;
  
 }
