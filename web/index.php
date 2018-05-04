@@ -23,7 +23,7 @@ switch ($action) {
 break;
  
   case 'assignm':
-     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/indexA.php');
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/index.php');
      break;
  
 }
