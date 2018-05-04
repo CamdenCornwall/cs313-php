@@ -14,7 +14,7 @@
         <?php include("HeadandFoot/header.php"); ?>
         
         <main>
-        <?php include("views/content/Home-content.php"); ?>
+            
         </main>
         
         <?php include("HeadandFoot/footer.php"); ?>
