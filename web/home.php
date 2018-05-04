@@ -20,7 +20,7 @@
                 I'm not very good at but I sincerely enjoy the byte limitations and art and sounds that had to be created 
                 for each game. I guess I'm more of an enthusiast. My favorite way to play these games is with my raspberry pi 
                 fitted with the latest Retro Pi open project. Projects like these is what got me into coding. I sometimes create my own games 
-                based around the ideas of the games I so enjoy; here's a link to <a href='http://d8dt.com/DinoApp/bennyAndTheStick.html' target="_blank">Jonny & the Stick</a>. 
+                based around the ideas of the games I so enjoy; here's a link to <a href='http://d8dt.com/DateGame/views/D8DTgameList/index.php?action=JonnyGame' target="_blank">Jonny & the Stick</a>. 
                 The game itself isn't 100% complete, but what coding project ever is. I want to add sound, graphics and it needs a few clean ups here and 
                 there, but as a text based adventure game I think it's pretty fun.
             </p>
