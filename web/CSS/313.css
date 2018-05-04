@@ -25,7 +25,9 @@
     
 }
 
-
+body {
+    color: blue;
+}
 
 
 
@@ -36,7 +38,7 @@
     background-color: black;  
 }
 #footer p{
-    /*color: #667766;*/
+    color: white;
     text-align: center;
 }
 /*#footer a{
