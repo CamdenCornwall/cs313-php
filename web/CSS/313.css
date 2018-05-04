@@ -28,12 +28,15 @@ body{
     background-color: #02003c;  
     margin: 0;
 }
+
 main {
     margin-left: 5%;
     margin-right: 5%;
     font-family: "Arial";
     color: #cceecc;
-
+}
+p {
+    font-size: 1.1em;
 }
 
 
