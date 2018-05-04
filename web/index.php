@@ -22,8 +22,8 @@ switch ($action) {
   include ($_SERVER['DOCUMENT_ROOT'].'/home.php');
 break;
  
-  case 'D8DThere':
-     include ($_SERVER['DOCUMENT_ROOT'].'/web/assignments/indexA.php');
+  case 'assignm':
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/indexA.php');
      break;
  
 }
