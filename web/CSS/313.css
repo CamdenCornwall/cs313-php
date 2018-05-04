@@ -51,8 +51,10 @@ p a {
     color: #cceecc;
 }
 
-
-
+ul li a {
+    color: #cceecc;
+    font-size: 1.1em;
+}
 
 
 
