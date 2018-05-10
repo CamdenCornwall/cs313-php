@@ -93,6 +93,7 @@ $successmessage = "Your message has been sent. Thank you.";
 
       
             <fieldset>
+                <div id="fname"></div>
                 <legend>Survey</legend>
                 <ul>
                     <li><label for="txtfName">First Name</label>
