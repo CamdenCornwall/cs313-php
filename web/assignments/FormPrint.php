@@ -15,11 +15,11 @@ $taMessage = ($_POST["taMessage"]);
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Submission Results</title>
+	<title>Forum Submit</title>
 </head>
 
 <body>
-	<h1>Submission Results</h1>
+	<h1>Forum Submit</h1>
 
 	<p>Your name is: <?=$name." ".$lname ?></p>
 	<p>Your email is: <a href="mailto:<?=$email?>"><?=$email?></a></p>
