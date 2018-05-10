@@ -109,6 +109,7 @@ $successmessage = "Your message has been sent. Thank you.";
       
             <fieldset>
                 <legend>Survey</legend>
+                <div id="fname"></div>
                 <ul>
                     <li><label for="txtfName">First Name</label>
                         <input type="text" name="txtfName" id="txtfName" size="20" /></li>
