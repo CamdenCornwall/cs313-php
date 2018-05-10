@@ -36,7 +36,7 @@ switch ($action) {
      break;
  
      case 'form':
-     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/FormTest.html');
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/FormTest.php');
      break;
  
 }

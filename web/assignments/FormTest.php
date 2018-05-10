@@ -1,7 +1,6 @@
 <?php
 //Check to see if the form has been submitted, if so use php to validate the inputs
 //This check sees if the btnSubmitMessage key exists in the POST object, if "true" the form has been submitted
-//http://d8dt.com/cit230/ponder-prove/contact-ponder-prove.php
 if($_POST['submit']) {
 
 // Create an empty error array to store any found errors
