@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>Shopping Item List</h1>
-    <form  method="POST" action="SC-yourCart.php">
+    <form  method="POST" action="yourcart">
         <input type="checkbox" name="places[]" id="place-na" value="North America"><label for="place-na">North America</label><br>
 	<input type="checkbox" name="places[]" id="place-sa" value="South America"><label for="place-sa">South America</label><br>
 	<input type="checkbox" name="places[]" id="place-asia" value="Asia"><label for="place-asia">Asia America</label><br>
