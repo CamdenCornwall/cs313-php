@@ -6,10 +6,11 @@
 // then in PHP we could process that value and determine the exact
 // presentation text to render.
 $name = ($_POST["name"]);
+$lname = ($_POST["lname"]);
 $email = ($_POST["email"]);
 $major = ($_POST["major"]);
 $places = $_POST["places"];
-$comments = ($_POST["comments"]);
+$taMessage = ($_POST["taMessage"]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,13 +21,13 @@ $comments = ($_POST["comments"]);
 <body>
 	<h1>Submission Results</h1>
 
-	<p>Your name is: <?=$name ?></p>
-	<p>Your email is: <a href="mailto:<?=$email ?>"><?=$email ?></a></p>
-	<p>Your major is: <?=$major ?></p>
+	<p>Your name is: <?=$name." ".$lname ?></p>
+	<p>Your email is: <a href="mailto:<?=$email?>"><?=$email?></a></p>
+	<p>Your major is: <?=$major?></p>
 	<p>You have been to the following places:</p>
 	<ul>
 
-<?
+<?php
 foreach ($places as $place)
 {
 	$place_clean = htmlspecialchars($place);
@@ -36,7 +37,7 @@ foreach ($places as $place)
 
 	</ul>
 
-	<p>Comments: <?=$comments?></p>
+	<p>Comments or Questions?: <?=$taMessage?></p>
 
 </body>
 
