@@ -15,7 +15,9 @@ if($action == NULL){
 if($action == NULL){
  $action = '02';
 }
-
+if($action == NULL){
+ $action = 'form';
+}
 
 }
 
@@ -31,6 +33,10 @@ switch ($action) {
  
     case '02':
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/T-02-313.html');
+     break;
+ 
+     case 'form':
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/FormTest.html');
      break;
  
 }

@@ -22,6 +22,7 @@ and open the template in the editor.
             <ul>
                 <li><a href="assignments/index.php?action=hello" title="to Hello">Hello</a> 01</li>
                 <li><a href="assignments/index.php?action=02" title="Basics Prove">Basics</a> 02</li>
+                <li><a href="assignments/index.php?action=02" title="Forum Passing">Forum Testing</a> 02</li>
             </ul>
         </main>
         
