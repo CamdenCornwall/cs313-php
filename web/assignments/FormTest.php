@@ -90,7 +90,22 @@ $successmessage = "Your message has been sent. Thank you.";
     <body>
 
         <h1>Forum</h1>
-
+        
+        <?php
+        // This displays the errors array if it is not empty, 
+        // if it is empty this does nothing
+        if ($errors) {
+        echo '<div>';
+        echo '<ul class="warning">';
+        foreach ($errors as $alert) {
+        echo "<li>$alert</li>";
+        }
+        echo '</ul>';
+        echo '</div>';
+        } elseif($successmessage) {
+        echo "<p class=\"warning\">".$successmessage."</p>";
+        }
+        ?>
       
             <fieldset>
                 <div id="fname"></div>
