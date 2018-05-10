@@ -1,14 +1,14 @@
 <form action="FormPrint.php">
                 <h1>Survey</h1>
-                <ul>
-                    <li><label for="name">First Name</label>
-                        <input type="text" name="name" id="name" size="20" /></li>
-                    <li><label for="lname">Last Name:</label> 
-                        <input type="text" name="lname" id="lname" size="21" /></li>
-                    <li><label for="email">Email: </label>
-                        <input type="text" name="email" id="email" size="40" /></li>
 
-                    <li>What is your Major?
+                    <label for="name">First Name</label>
+                        <input type="text" name="name" id="name" size="20" />
+                    <label for="lname">Last Name:</label> 
+                        <input type="text" name="lname" id="lname" size="21" />
+                    <label for="email">Email: </label>
+                        <input type="text" name="email" id="email" size="40" />
+
+                    What is your Major?
                         <br>
                         <input type="radio" name="major" id="CS" value="CS" checked="checked"/>
                         <label for="CS">Computer Science</label>
@@ -22,9 +22,9 @@
                         <input type="radio" name="major" id="CE" value="CE" />
                         <label for="CE">Computer Engineering</label>
                         <br>
-                    </li>
                     
-                    <li>What continents have you visited?<br>
+                    
+                    What continents have you visited?<br>
 			<input type="checkbox" name="places[]" id="place-na" value="North America"><label for="place-na">North America</label><br>
 			<input type="checkbox" name="places[]" id="place-sa" value="South America"><label for="place-sa">South America</label><br>
 			<input type="checkbox" name="places[]" id="place-asia" value="Asia"><label for="place-asia">Asia America</label><br>
@@ -32,11 +32,11 @@
 			<input type="checkbox" name="places[]" id="place-af" value="Africa"><label for="place-af">Africa</label><br>
 			<input type="checkbox" name="places[]" id="place-aus" value="Australia"><label for="place-aus">Australia</label><br>
 			<input type="checkbox" name="places[]" id="place-ant" value="Antarctica"><label for="place-ant">Antarctica</label><br>
-                    </li>
-                    <li><label for="taMessage">Questions or Comments?</label></li>
-                    <li><textarea name="taMessage" id="taMessage" cols="40" rows="10" onfocus="this.value='';this.onfocus=null">Type your question or comment here</textarea></li>
-                    <li><label for="submit">&nbsp;</label><input type="submit" value="Submit Ans"></li>
-                </ul>
+                    
+                    <label for="taMessage">Questions or Comments?</label>
+                    <textarea name="taMessage" id="taMessage" cols="40" rows="10" onfocus="this.value='';this.onfocus=null">Type your question or comment here</textarea>
+                    <label for="submit">&nbsp;</label><input type="submit" value="Submit Ans">
+
             </form>
     </body>
 </html>
