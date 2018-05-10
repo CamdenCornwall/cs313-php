@@ -18,6 +18,9 @@ if($action == NULL){
 if($action == NULL){
  $action = 'form';
 }
+if($action == NULL){
+ $action = 'shop';
+}
 
 }
 
@@ -37,6 +40,10 @@ switch ($action) {
  
      case 'form':
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/FormTest.html');
+     break;
+ 
+     case 'shop':
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/index.php');
      break;
  
 }
