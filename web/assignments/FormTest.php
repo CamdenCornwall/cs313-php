@@ -50,14 +50,9 @@ if(!$errors) {
 $to = 'camdenc.cornwall@gmail.com';
 $txtfName = $_POST['txtfName']."\n";
 $txtlName = $_POST['txtlName']."\n";
-$rSubject = $_REQUEST['rSubject'];
-$taMessage = $_POST['taMessage'];
 $txtEmail = $_POST['txtEmail']."\n";
-$from = 'From:'.$_POST['from'];
-$console = $_POST['console'];
-$likeit =$_POST['likeit'];
-$how =$_POST['how'];
-$want =$_POST['want'];
+$major = $_POST['major']."\n";
+$taMessage = $_POST['taMessage'];
 
 $message = "Hello!
 
@@ -67,13 +62,7 @@ First Name: $txtfName
 Last Name: $txtlName
 E-mail: $txtEmail
 
-Like this website? $likeit
-    
-How much time do you spend gaming? $how
-    
-How much time do you want spend gaming? $want
-
-What are your favorite consoles? $console
+What is your major? $major
 
 Comments: $taMessage
 
@@ -107,8 +96,7 @@ $successmessage = "Your message has been sent. Thank you.";
                 <legend>Survey</legend>
                 <ul>
                     <li><label for="txtfName">First Name</label>
-                        <input type="text" name="txtfName" id="txtfName" size="20" />
-                    </li>
+                        <input type="text" name="txtfName" id="txtfName" size="20" /></li>
                     <li><label for="txtlName">Last Name:</label> 
                         <input type="text" name="txtlName" id="txtlName" size="21" /></li>
                     <li><label for="txtEmail">Email: </label>
