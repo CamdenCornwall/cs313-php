@@ -2,7 +2,11 @@
     border-style: solid;
     border-color: red;
 }
-.product::after {
+.product:first-child {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.product:nth-child(2) {
     margin-left: 5%;
     margin-right: 5%;
 }
