@@ -31,7 +31,7 @@ switch ($action) {
      break;
  
     case 'xcart':
-     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/CS313-02-master/browse.php');
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/browse.php');
      break;
  
 
