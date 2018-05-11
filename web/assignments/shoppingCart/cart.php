@@ -23,10 +23,10 @@
           if($value == 'rag'){
             echo "<a href='deleteOne.php'>remove</a></div>";
           }
-          else if($value == 'log'){
+          else if($value == 'boot'){
             echo "<a href='deleteBoot.php'>remove</a></div>";
           }
-          else if($value == 'twig'){
+          else if($value == 'stick'){
             echo "<a href='deleteStick.php'>remove</a></div>";
           }
       }
