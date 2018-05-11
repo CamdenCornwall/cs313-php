@@ -18,7 +18,7 @@
       echo "<p>You have:</p>";
       foreach ($_SESSION['myproducts'] as $value) {
           echo "<div class=\"product\">
-                <h3>$value</h3><a href='deleteItem.php'>remove</a>
+                <h3>$value</h3><a href='deleteOne.php'>remove</a>
                 </div>";
       }
   }
@@ -28,6 +28,7 @@
 
 <a href="browse.php">Browse</a>
 <a href="checkout.php">Checkout</a>
+<a href='deleteItem.php'>Remove All</a>
 
 <?php
    include('footer.php')
