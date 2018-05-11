@@ -1,9 +1,9 @@
 <?php
     // Start the session
     session_start();
-    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-    header("Cache-Control: post-check=0, pre-check=0", false);
-    header("Pragma: no-cache");
+//    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+//    header("Cache-Control: post-check=0, pre-check=0", false);
+//    header("Pragma: no-cache");
 //    header("Refresh: 5");
     include('header.php');
 ?>
@@ -35,7 +35,7 @@
 ?>
 
 
-
+<br>
 <a href="browse.php">Browse</a>
 <a href="checkout.php">Checkout</a>
 <a href='deleteItem.php'>Remove All</a>
