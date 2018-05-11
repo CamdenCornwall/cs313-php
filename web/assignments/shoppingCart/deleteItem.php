@@ -1,4 +1,6 @@
 <?php
     session_start();
-    unset($_SESSION['myproducts'][$_REQUEST["item"] - 1]);
+    unset($_SESSION['myproducts']);
+    
+    header("Location: cart.php");
 ?>
