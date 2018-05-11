@@ -3,7 +3,7 @@
     //unset($_SESSION['myproducts']["rag"]);
     //
     foreach($_SESSION['myproducts'] as $key => $value) {
-         if($value == 'log'){
+         if($value == 'stick'){
             unset($_SESSION['myproducts'][$key]);
             break;
          }

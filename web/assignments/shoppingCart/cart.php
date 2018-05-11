@@ -24,10 +24,10 @@
             echo "<a href='deleteOne.php'>remove</a></div>";
           }
           else if($value == 'log'){
-            echo "<a href='deleteLog.php'>remove</a></div>";
+            echo "<a href='deleteBoot.php'>remove</a></div>";
           }
           else if($value == 'twig'){
-            echo "<a href='deleteTwig.php'>remove</a></div>";
+            echo "<a href='deleteStick.php'>remove</a></div>";
           }
       }
       //echo "<h3>$ID</h3>";
