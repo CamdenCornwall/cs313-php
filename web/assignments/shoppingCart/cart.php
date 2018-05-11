@@ -11,7 +11,7 @@
 <h1>Cart</h1>
 
 <?php
-    $ID = ($_SESSION['myproducts']["prodId"]);
+    $ID = ($_SESSION['myproducts'][$_REQUEST["prodId"]]);
   if (count($_SESSION['myproducts']) == 0) {
       echo "<p>Your cart is empty</p>";
   }  
