@@ -11,7 +11,7 @@ if (isset($_SESSION['myproducts'])) {
     $_SESSION['myproducts'][] = $_GET['product'];
 }
 else {
-    $_SESSION['myproducts'] = array();
+    //$_SESSION['myproducts'] = array();
     $_SESSION['myproducts'][] = $_GET['product'];
 }
 
