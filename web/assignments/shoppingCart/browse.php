@@ -13,7 +13,6 @@
 
 <br>
 <br>
-<br>
 
 <form action="browse.php" method="get">
     Search: <input type="text" name="search" value="<?php echo $_GET["search"] ?>">
