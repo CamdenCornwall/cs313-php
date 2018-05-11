@@ -4,13 +4,13 @@ $productCount = 3;
 $prices = array(1.50, 4.50, 0.50);
 $products = array("rag", "log", "twig");
 
-if($products[0] == "rag"){
+if($products[] == "rag"){
     $prodId = 1;
 }
-if($products[1] == "log"){
+if($products[] == "log"){
     $prodId = 2;
 }
-if($products[2] == "twig"){
+if($products[] == "twig"){
     $prodId = 3;
 }
 

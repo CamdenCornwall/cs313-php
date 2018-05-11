@@ -12,7 +12,7 @@ if (isset($_SESSION['myproducts'])) {
 }
 else {
     $_SESSION['myproducts'] = array();
-    $_SESSION['myproducts'][] = $_GET['product'];
+    $_SESSION['myproducts'][] = $_GET['product']['prodId'];
 }
 
 print_r($_SESSION['myproducts']);
