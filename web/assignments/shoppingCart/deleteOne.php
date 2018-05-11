@@ -7,7 +7,7 @@
 //            unset($_SESSION[$key]);
 //         }
 //    }
-    $_Session->remove('rag');
+    $_SESSION->remove('rag');
         
     header("Location: cart.php");
 ?>
