@@ -5,6 +5,7 @@
     foreach($_SESSION['myproducts'] as $key => $value) {
          if($value == 'rag'){
             unset($_SESSION['myproducts'][$key]);
+            break;
          }
     }
 //    $toDelete = array(0 => "a", 1 => "b", 2 => "c");
