@@ -1,5 +1,8 @@
 .product {
     border-style: solid;
+    border-color: red;
+}
+.product::after {
     margin-left: 5%;
     margin-right: 5%;
 }
