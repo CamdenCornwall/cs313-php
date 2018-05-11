@@ -18,7 +18,7 @@
       echo "<p>You have:</p>";
       foreach ($_SESSION['myproducts'] as $value) {
           echo "<div class=\"product\">
-                <h3>$value</h3><a href="deleteItem.php">Browse</a>
+                <h3>$value</h3><a href='deleteItem.php'>Browse</a>
                 </div>";
       }
   }
