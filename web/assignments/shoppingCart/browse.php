@@ -7,7 +7,7 @@
     include('header.php');
 ?>
 <h1>Useless Junk</h1>
-<h6>You have <?php echo count($_SESSION['myproducts']); ?> item(s) in your cart</h6>
+<h3>You have <?php echo count($_SESSION['myproducts']); ?> item(s) in your cart</h3>
 <a href="cart.php">See Cart</a>
 <a href="checkout.php">Checkout</a>
 
