@@ -22,7 +22,7 @@
                 <h3>$value</h3><a href='deleteOne.php'>remove</a>
                 </div>";
       }
-      echo $ID;
+      echo "<h1>$ID</h1>";
   }
 ?>
 
