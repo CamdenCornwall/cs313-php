@@ -2,7 +2,7 @@
 
 $productCount = 3;
 $prices = array(1.50, 4.50, 0.50);
-$products = array("rag", "boot", "stick");
+$products = array("fish bones", "boot", "stick");
 
 
 echo '<html> 

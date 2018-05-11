@@ -20,7 +20,7 @@
       foreach ($_SESSION['myproducts'] as $value) {
           echo "<div class=\"product\">
                 <p>$value</p>";
-          if($value == 'rag'){
+          if($value == 'fish bones'){
             echo "<a href='deleteOne.php'>remove</a></div>";
           }
           else if($value == 'boot'){

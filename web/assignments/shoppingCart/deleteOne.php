@@ -3,7 +3,7 @@
     //unset($_SESSION['myproducts']["rag"]);
     //
     foreach($_SESSION['myproducts'] as $key => $value) {
-         if($value == 'rag'){
+         if($value == 'fish bones'){
             unset($_SESSION['myproducts'][$key]);
             break;
          }
