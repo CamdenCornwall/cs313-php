@@ -10,7 +10,7 @@
 <h2>Confirm that you want to checkout these items?</h2>
 
 <?php
-  if (count($_SESSION['myproducts']) <= 0) {
+  if (count($_SESSION['myproducts']) == 0) {
       echo "<p>Your cart is empty</p>";
   }  
   else {
@@ -24,8 +24,6 @@
 
 <?php
   if (count($_SESSION['myproducts']) != 0) {
-    echo "<p>Your Cart is Empty</p>";
-    // With more time, validation would be a nice feature
     echo "<div class=\"checkout\"><h1>Checkout:</h1><form action=\"confirmed.php\" method=\"post\">
         Street: <input required type=\"text\" name=\"street\"> <br>
         Apt #: <input type=\"text\" name=\"apt\"> <br>
