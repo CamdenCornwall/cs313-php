@@ -14,6 +14,9 @@ if($action == NULL){
 if($action == NULL){
  $action = 'yourcart';
 }
+if($action == NULL){
+ $action = 'xcart';
+}
 
 }
 
@@ -25,6 +28,10 @@ switch ($action) {
  
    case 'yourcart':
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/SC-yourCart.php');
+     break;
+ 
+    case 'xcart':
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/simple-php-shopping-cart/index.php');
      break;
  
 
