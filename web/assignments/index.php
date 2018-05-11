@@ -42,9 +42,9 @@ switch ($action) {
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/FormTest.html');
      break;
  
-     case 'shop':
-     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/index.php');
-     break;
+//     case 'shop':
+//     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/index.php');
+//     break;
  
 }
 
