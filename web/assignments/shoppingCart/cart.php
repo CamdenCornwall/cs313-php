@@ -11,7 +11,7 @@
 <h1>Cart</h1>
 
 <?php
-  $ID = print_r($_SESSION); 
+  $ID = ($_SESSION['myproducts']); 
   if (count($_SESSION['myproducts']) == 0) {
       echo "<p>Your cart is empty</p>";
   }  
@@ -22,7 +22,7 @@
                 <h3>$value</h3><a href='deleteOne.php'>remove</a>
                 </div>";
       }
-      echo "<h1>$ID</h1>";
+      echo "<h3>$ID</h3>";
   }
 ?>
 
