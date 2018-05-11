@@ -7,7 +7,11 @@
 //            unset($_SESSION[$key]);
 //         }
 //    }
-    $_SESSION->remove("rag");
+//    $toDelete = array(0 => "a", 1 => "b", 2 => "c");
+//    unset($array[1]);
+    
+    $toDelete = ($_SESSION['myproducts']);
+    unset($toDelete[1]);
         
     header("Location: cart.php");
 ?>
