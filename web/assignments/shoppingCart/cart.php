@@ -19,8 +19,16 @@
       echo "<p>You have:</p>";
       foreach ($_SESSION['myproducts'] as $value) {
           echo "<div class=\"product\">
-                <h3>$value</h3><a href='deleteOne.php'>remove</a>
-                </div>";
+                <h3>$value</h3>";
+          if($value == 'rag'){
+            echo "<a href='deleteOne.php'>remove</a></div>";
+          }
+          else if($value == 'log'){
+            echo "<a href='deleteLog.php'>remove</a></div>";
+          }
+          else if($value == 'twig'){
+            echo "<a href='deleteTwig.php'>remove</a></div>";
+          }
       }
       //echo "<h3>$ID</h3>";
   }
