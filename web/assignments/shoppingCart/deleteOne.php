@@ -10,8 +10,8 @@
 //    $toDelete = array(0 => "a", 1 => "b", 2 => "c");
 //    unset($array[1]);
     
-    $toDelete = ($_SESSION['myproducts']);
-    unset($toDelete[1]);
-        
+//    $toDelete = ($_SESSION['myproducts']);
+//    unset($toDelete[1]);
+    unset($_SESSION['myproducts'][0]);    
     header("Location: cart.php");
 ?>
