@@ -19,7 +19,7 @@
       echo "<p>You have:</p>";
       foreach ($_SESSION['myproducts'] as $value) {
           echo "<div class=\"product\">
-                <h3>$value</h3>";
+                <p>$value</p>";
           if($value == 'rag'){
             echo "<a href='deleteOne.php'>remove</a></div>";
           }
