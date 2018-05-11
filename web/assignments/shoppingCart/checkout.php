@@ -10,7 +10,7 @@
 <h2>Confirm that you want to checkout these items?</h2>
 
 <?php
-  if (count($_SESSION['myproducts']) == 0) {
+  if (count($_SESSION['myproducts']) <= 0) {
       echo "<p>Your cart is empty</p>";
   }  
   else {
