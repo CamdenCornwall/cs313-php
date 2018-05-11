@@ -20,6 +20,6 @@ print_r($_SESSION['myproducts']);
 // Useful for debugging
 // session_destroy();
 
-header("Location: shoppingCart/browse.php");
+header("Location: browse.php");
 die();
 ?>
