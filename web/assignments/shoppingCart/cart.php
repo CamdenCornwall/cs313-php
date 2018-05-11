@@ -11,7 +11,7 @@
 <h1>Cart</h1>
 
 <?php
-    $ID = ($_SESSION['myproducts'][prodId]);
+  $ID = print_r($_SESSION); 
   if (count($_SESSION['myproducts']) == 0) {
       echo "<p>Your cart is empty</p>";
   }  
@@ -19,9 +19,10 @@
       echo "<p>You have:</p>";
       foreach ($_SESSION['myproducts'] as $value) {
           echo "<div class=\"product\">
-                <h3>$value</h3><p>$ID</p><a href='deleteOne.php'>remove</a>
+                <h3>$value</h3><a href='deleteOne.php'>remove</a>
                 </div>";
       }
+      echo $ID;
   }
 ?>
 
