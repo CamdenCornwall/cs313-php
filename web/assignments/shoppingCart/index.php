@@ -26,10 +26,6 @@ switch ($action) {
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/SC-shopping.php');
      break;
  
-   case 'yourcart':
-     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/SC-yourCart.php');
-     break;
- 
     case 'xcart':
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/browse.php');
      break;
