@@ -13,7 +13,7 @@ try {
     return $acmeLink;
 } catch (PDOException $ex) {
     echo 'Connection failed';
-    header('location: \index.php'); 
+    header('location: \hello.html'); 
 //    header('location: \acme\index.php'); 
 }
 }
