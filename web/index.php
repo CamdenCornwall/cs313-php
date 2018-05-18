@@ -10,6 +10,15 @@ require_once 'connecttoSQL.php';
 
 connect();
 
+$sql = "INSERT INTO MyGuests (name, email, pass, notes)
+VALUES ('John', 'john@example.com', 1234, Wow this is great)";
+
+if ($dbconn4->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $dbconn4->error;
+}
+
  $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){
  $action = filter_input(INPUT_GET, 'action');
