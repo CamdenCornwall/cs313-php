@@ -12,6 +12,7 @@ try {
     echo 'Connection worked';
     return $acmeLink;
 } catch (PDOException $ex) {
+    echo 'Connection failed';
     header('location: \acme\acmeError.php'); 
 //    header('location: \acme\index.php'); 
 }
