@@ -9,7 +9,7 @@ $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
 try {
     $acmeLink = new PDO($dsn, $user, $password, $options);
-//    echo 'Connection worked';
+    echo 'Connection worked';
     return $acmeLink;
 } catch (PDOException $ex) {
     header('location: \acme\acmeError.php'); 
