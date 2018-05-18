@@ -3,6 +3,13 @@
 /**
 * MAIN HOME INDEX
 */
+
+session_start();
+// Get the database connection file
+require_once 'connecttoSQL.php';
+
+
+
  $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){
  $action = filter_input(INPUT_GET, 'action');
