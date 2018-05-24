@@ -21,3 +21,5 @@ try {
 //    header('location: \acme\index.php'); 
 }
 }
+
+connect();
