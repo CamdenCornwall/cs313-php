@@ -14,8 +14,10 @@ try {
     echo 'Connection worked';
     return $dbconn4;
 } catch (PDOException $ex) {
-    echo 'Connection failed';
-    header('location: \hello.html'); 
+	// If this were in production, you would not want to echo
+	// the details of the exception.
+	echo "Error connecting to DB. Details: $ex";
+	die();
 //    header('location: \acme\index.php'); 
 }
 }
