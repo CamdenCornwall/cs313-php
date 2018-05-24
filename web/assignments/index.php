@@ -3,6 +3,12 @@
 /**
 * INDEX of ASSIGMNETS!!!!!!!!!!!!!!!!!!!!!
 */
+
+require_once 'connecttoSQL.php';
+
+connect();
+
+
  $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){
  $action = filter_input(INPUT_GET, 'action');
@@ -21,7 +27,9 @@ if($action == NULL){
 if($action == NULL){
  $action = 'shop';
 }
-
+if($action == NULL){
+ $action = 'BOM';
+}
 }
 
 switch ($action) {
@@ -41,7 +49,10 @@ switch ($action) {
      case 'form':
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/FormTest.html');
      break;
- 
+
+     case 'BOM':
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/accessDBscriptures.php');
+     break; 
 //     case 'shop':
 //     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/index.php');
 //     break;

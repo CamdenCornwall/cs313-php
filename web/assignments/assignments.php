@@ -24,6 +24,7 @@ and open the template in the editor.
                 <li><a href="assignments/index.php?action=02" title="Basics Prove">Basics</a> 02</li>
                 <li><a href="assignments/index.php?action=form" title="Forum Passing">Forum Testing</a> 03</li>
                 <li><a href="assignments/shoppingCart/index.php?action=xcart" title="Shopping Cart">Shopping Cart</a> 03</li>
+                <li><a href="assignments/index.php?action=BOM" title="Scripture connect to Database">Scriptures Connect</a> 04</li>
             </ul>
         </main>
         
