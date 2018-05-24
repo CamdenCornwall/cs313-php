@@ -1,6 +1,6 @@
 <?php // Get the database connection file
-//require_once 'connecttoSQL.php';
-//connect();
+require_once 'connecttoSQL.php';
+connect();
 ?>
 
 <!DOCTYPE html>
