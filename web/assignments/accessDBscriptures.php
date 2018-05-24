@@ -12,7 +12,7 @@
 
 <?php
 
-$statement = $dbconn4->prepare("SELECT book, chapter, verse, content FROM scripture");
+$statement = $dbconn4->prepare("SELECT book, chapter, verse, content FROM scriptures");
 $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
