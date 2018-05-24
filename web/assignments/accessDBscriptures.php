@@ -1,6 +1,5 @@
 <?php// Get the database connection file
 require_once 'connecttoSQL.php';
-
 connect();
 ?>
 
