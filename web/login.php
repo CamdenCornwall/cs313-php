@@ -9,7 +9,7 @@ session_start();
 
 if (isset($_POST['Submit'])) {
         $_SESSION['uname'] = $_POST['uname'];
-        echo 'Totally Loged IN';
+        echo 'Totally Logged IN';
     }
 ?>
 <html>
@@ -26,8 +26,8 @@ if (isset($_POST['Submit'])) {
         <?php include("HeadandFoot/header.php"); ?>
         <main>
             <div class="container">
-                <label for="name"><h3>Username</h3></label>
-                <input type="text" placeholder="Enter Username" name="name" required>
+                <label for="uname"><h3>Username</h3></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
                 <br>
                 <label for="pass"><h3>Password</h3></label>
                 <input type="password" placeholder="Enter Password" name="pass" required>
