@@ -12,8 +12,8 @@
     <body>
 <?php include("../HeadandFoot/header.php"); ?>
 <div>
-
-<h1>My Notes!</h1>
+    <main>
+        <h1>My Notes!</h1>
 
 <?php
 //Make Connection
@@ -28,7 +28,6 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
-	echo '<main>';
 	echo '<h3>' . $row['name'] . "'s Notes!" . '</h3>';
         echo '<p>';
 	echo $row['notes'];
