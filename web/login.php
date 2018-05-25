@@ -21,14 +21,15 @@ session_start();
         <?php include("HeadandFoot/header.php"); ?>
         <main>
             <div class="container">
-                <label for="name"><b>Username</b></label>
+                <label for="name"><h3>Username</h3></label>
                 <input type="text" placeholder="Enter Username" name="name" required>
-
-                <label for="pass"><b>Password</b></label>
+                <br>
+                <label for="pass"><h3>Password</h3></label>
                 <input type="password" placeholder="Enter Password" name="pass" required>
-
+                <br>
                 <button type="submit" name="Submit">Login</button>
             </div>
+            <br><br>
         </main>
         <?php include("HeadandFoot/footer.php"); ?>
     </body>
