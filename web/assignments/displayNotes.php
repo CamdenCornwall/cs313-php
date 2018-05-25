@@ -28,20 +28,19 @@ echo $username;
 $statement = $db->prepare("SELECT * FROM my_notes WHERE name = '$username'");
 $statement->execute();
 $row = $statement->fetch(PDO::FETCH_ASSOC);
-
-    if($row->rowCount() != 0){
-        echo '<h3>' . $row['name'] . "'s Notes!" . '</h3>';
-        echo '<textarea rows="25" cols="50">';
-	echo $row['notes'];
-	echo '</textarea>';
-         
+ Go through each result
+    if($row->rowCount() == 0){
+        $message = 'That Username is unrecognized try again.';
+        header('location: ../login.php'); 
     }
     else{
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
-	$message = 'That Username is unrecognized try again.';
-        header('location: ../login.php');
+	echo '<h3>' . $row['name'] . "'s Notes!" . '</h3>';
+        echo '<textarea rows="25" cols="50">';
+	echo $row['notes'];
+	echo '</textarea>';
     }
         //echo '</main>'
 ?>
