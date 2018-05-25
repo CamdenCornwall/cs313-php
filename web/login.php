@@ -9,10 +9,16 @@ session_start();
 ?>
 <html>
     <head>
+        <title>Log In</title>
         <meta charset="UTF-8">
-        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+         <link rel="icon" href="http://d8dt.com/favicon.ico" type="image/x-icon" />
+         
+         <link href="CSS/313.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+    <?php include("HeadandFoot/header.php"); ?>
     <div class="container">
       <label for="name"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="name" required>
@@ -22,6 +28,7 @@ session_start();
         
       <button type="submit" name="Submit">Login</button>
     </div>
+    <?php include("HeadandFoot/footer.php"); ?>
     </body>
     <?php
         if (isset($_POST['Submit'])) {
