@@ -32,7 +32,7 @@ if (isset($_POST['Submit'])) {
                 <label for="pass"><h3>Password</h3></label>
                 <input type="password" placeholder="Enter Password" name="pass" required>
                 <br><br>
-                <input type="submit" name="Submit" value='Login'/>
+                <input type="submit" name="Submit" value='Login!'/>
                 <!--<input type="hidden" name="action" value="LoggedIn">-->
             </div>
             <br><br>
