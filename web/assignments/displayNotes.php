@@ -30,6 +30,11 @@ $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
+    if($row['name'] == NULL){
+        header('location: ..\login.php');
+        $message = 'That Username is unrecognized try again.';
+    }
+    else{
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
@@ -37,6 +42,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         echo '<textarea rows="25" cols="50">';
 	echo $row['notes'];
 	echo '</textarea>';
+    }
         //echo '</main>';
 }
 ?>

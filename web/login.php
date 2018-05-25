@@ -6,7 +6,6 @@ and open the template in the editor.
 -->
 <?php
 session_start();
-
 if (isset($_POST['Submit'])) {
         $_SESSION['uname'] = $_POST['uname'];
         echo 'Totally Logged IN';
@@ -27,6 +26,7 @@ else {echo 'Not Logged in......';}
     <body>
         <?php include("HeadandFoot/header.php"); ?>
         <main>
+            <?php echo $message; ?>
             <form method="POST">
                 <label for="uname"><h3>Username</h3></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
