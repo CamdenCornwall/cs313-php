@@ -25,7 +25,7 @@ $uname = $_SESSION['uname'];
 echo $uname;
 //Draw Data Base
 //$statement = $db->prepare("SELECT name, notes FROM my_notes");
-$statement = $db->prepare("SELECT name, notes FROM my_notes WHERE name = $uname");
+$statement = $db->prepare("SELECT * FROM my_notes WHERE name = $uname");
 $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
