@@ -16,8 +16,11 @@ try {
     //$conn_string = "host=$server dbname=$database user=$user password=$password";
     //$dbconn4 = pg_connect($conn_string);
     //$acmeLink = new PDO($dsn, $user, $password, $options);
-    echo 'Connection worked';
-    echo "Error connecting to DB. Details: $ex";
+    if ($db->connect_error) {
+        die("Connection failed: " . $db->connect_error);
+    }
+    else{
+    echo 'Connection worked';}
     //echo $db;
     return $db;
 } catch (PDOException $ex) {
