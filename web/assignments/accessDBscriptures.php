@@ -12,6 +12,7 @@
 
 <?php
 require_once '../connecttoSQL.php';
+connect();
 
 $statement = $dbconn4->prepare("SELECT book, chapter, verse, content FROM scriptures");
 $statement->execute();
