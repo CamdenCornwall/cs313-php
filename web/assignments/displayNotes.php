@@ -27,10 +27,9 @@ echo $username;
 //$statement = $db->prepare("SELECT name, notes FROM my_notes");
 $statement = $db->prepare("SELECT * FROM my_notes WHERE name = '$username'");
 $statement->execute();
+$row = $statement->fetch(PDO::FETCH_ASSOC);
 // Go through each result
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
-    if($row['name'] == ''){
+    if($row->rowCount() == 0){
         header('location: ../login.php');
         $message = 'That Username is unrecognized try again.';
     }
@@ -43,8 +42,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	echo $row['notes'];
 	echo '</textarea>';
     }
-        //echo '</main>';
-}
+        //echo '</main>'
 ?>
     </main>
 </div>
