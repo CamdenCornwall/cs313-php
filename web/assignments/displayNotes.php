@@ -20,7 +20,7 @@
 require_once '../connecttoSQL.php';
 $db = connect();
 //Draw Data Base
-$statement = $db->prepare("SELECT user, notes FROM MyNotes");
+$statement = $db->prepare("SELECT user, notes FROM my_notes");
 $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
