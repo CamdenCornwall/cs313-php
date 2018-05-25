@@ -6,7 +6,6 @@ and open the template in the editor.
 -->
 <?php
 session_start();
-require_once '../connecttoSQL.php';
 if (isset($_POST['Submit'])) {
         $_SESSION['uname'] = $_POST['uname'];
         echo 'Totally Logged IN';
