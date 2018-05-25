@@ -26,7 +26,7 @@ else {echo 'Not Logged in......';}
     <body>
         <?php include("HeadandFoot/header.php"); ?>
         <main>
-            <div class="container">
+            <form method="POST">
                 <label for="uname"><h3>Username</h3></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
                 <br>
@@ -35,7 +35,7 @@ else {echo 'Not Logged in......';}
                 <br><br>
                 <input type="submit" name="Submit" value='Login!'/>
                 <!--<input type="hidden" name="action" value="LoggedIn">-->
-            </div>
+            </form>
             <br><br>
         </main>
         <?php include("HeadandFoot/footer.php"); ?>
