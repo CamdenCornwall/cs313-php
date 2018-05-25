@@ -19,8 +19,11 @@
 //Make Connection
 require_once '../connecttoSQL.php';
 $db = connect();
+//Get user
+$uname = $_SESSION['uname'];
 //Draw Data Base
-$statement = $db->prepare("SELECT name, notes FROM my_notes");
+//$statement = $db->prepare("SELECT name, notes FROM my_notes");
+$statement = $db->prepare("SELECT name, notes FROM my_notes WHERE name = $uname");
 $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))

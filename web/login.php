@@ -10,6 +10,7 @@ session_start();
 if (isset($_POST['Submit'])) {
         $_SESSION['uname'] = $_POST['uname'];
         echo 'Totally Logged IN';
+            header('location: \assignments\displayNotes.php');
     }
 else {echo 'Not Logged in......';}
 ?>
