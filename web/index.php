@@ -43,7 +43,7 @@ break;
      include ($_SERVER['DOCUMENT_ROOT'].'/login.php');
      break;
     case 'LogOut':
-     include ($_SERVER['DOCUMENT_ROOT'].'/login.php');
+     include ($_SERVER['DOCUMENT_ROOT'].'/logout.php');
      break;
  
 }
