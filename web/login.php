@@ -11,6 +11,7 @@ if (isset($_POST['Submit'])) {
         $_SESSION['uname'] = $_POST['uname'];
         echo 'Totally Logged IN';
     }
+else {echo 'Not Logged in......';}
 ?>
 <html>
     <head>
