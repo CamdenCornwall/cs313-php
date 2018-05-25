@@ -6,6 +6,11 @@ and open the template in the editor.
 -->
 <?php
 session_start();
+
+if (isset($_POST['Submit'])) {
+        $_SESSION['uname'] = $_POST['uname'];
+        echo 'Totally Loged IN';
+    }
 ?>
 <html>
     <head>
@@ -28,15 +33,13 @@ session_start();
                 <input type="password" placeholder="Enter Password" name="pass" required>
                 <br><br>
                 <button type="submit" name="Submit">Login</button>
+                <!--<input type="hidden" name="action" value="LoggedIn">-->
             </div>
             <br><br>
         </main>
         <?php include("HeadandFoot/footer.php"); ?>
     </body>
     <?php
-    if (isset($_POST['Submit'])) {
-        $_SESSION['name'] = $_POST['name'];
-            header('location: \assignments\displayNotes.php');
-    }
+    
     ?>
 </html>
