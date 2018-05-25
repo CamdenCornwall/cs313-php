@@ -29,7 +29,7 @@ $statement = $db->prepare("SELECT * FROM my_notes WHERE name = '$username'");
 $statement->execute();
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 //Go through each result
-    if($row->rowCount() == 0){
+    if(empty($row)){
         $message = 'That Username is unrecognized try again.';
         header('location: ../login.php'); 
     }
