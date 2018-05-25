@@ -17,7 +17,7 @@ try {
     //$dbconn4 = pg_connect($conn_string);
     //$acmeLink = new PDO($dsn, $user, $password, $options);
     echo 'Connection worked';
-    //return $dbconn4;
+    echo $db;
     return $db;
 } catch (PDOException $ex) {
 	// If this were in production, you would not want to echo
