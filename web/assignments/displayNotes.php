@@ -30,7 +30,7 @@ $statement->execute();
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 //Go through each result
     if(empty($row)){
-        $message = 'That Username is unrecognized try again.';
+        $_SESSION['message'] = 'That Username is unrecognized try again.';
         header('location: ../login.php'); 
     }
     else{

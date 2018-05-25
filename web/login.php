@@ -26,7 +26,7 @@ else {echo 'Not Logged in......';}
     <body>
         <?php include("HeadandFoot/header.php"); ?>
         <main>
-            <?php echo $message; ?>
+            <?php echo $_SESSION['message']; ?>
             <form method="POST">
                 <label for="uname"><h3>Username</h3></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
