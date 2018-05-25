@@ -20,9 +20,11 @@ try {
         die("Connection failed: " . $db->connect_error);
     }
     else{
-    echo 'Connection worked';}
+    //echo 'Connection worked';}
     //echo $db;
     return $db;
+    
+    }
 } catch (PDOException $ex) {
 	// If this were in production, you would not want to echo
 	// the details of the exception.

@@ -22,7 +22,6 @@ require_once '../connecttoSQL.php';
 $db = connect();
 //Get user
 $username = $_SESSION['uname'];
-echo $username;
 //Draw Data Base
 //$statement = $db->prepare("SELECT name, notes FROM my_notes");
 $statement = $db->prepare("SELECT * FROM my_notes WHERE name = '$username'");
