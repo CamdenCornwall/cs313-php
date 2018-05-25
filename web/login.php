@@ -26,7 +26,7 @@ session_start();
                 <br>
                 <label for="pass"><h3>Password</h3></label>
                 <input type="password" placeholder="Enter Password" name="pass" required>
-                <br>
+                <br><br>
                 <button type="submit" name="Submit">Login</button>
             </div>
             <br><br>
@@ -36,6 +36,7 @@ session_start();
     <?php
     if (isset($_POST['Submit'])) {
         $_SESSION['name'] = $_POST['name'];
+            header('location: \assignments\displayNotes.php');
     }
     ?>
 </html>
