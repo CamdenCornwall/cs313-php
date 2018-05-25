@@ -11,7 +11,8 @@ if (isset($_POST['Submit'])) {
         echo 'Totally Logged IN';
             header('location: \assignments\displayNotes.php');
     }
-else {echo 'Not Logged in......';}
+else {//echo 'Not Logged in......';
+}
 ?>
 <html>
     <head>

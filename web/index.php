@@ -22,6 +22,9 @@ if($action == NULL){
 if($action == NULL){
  $action = 'LogIn';
 }
+if($action == NULL){
+ $action = 'LogOut';
+}
 
 
 }
@@ -37,6 +40,9 @@ break;
      break;
  
    case 'LogIn':
+     include ($_SERVER['DOCUMENT_ROOT'].'/login.php');
+     break;
+    case 'LogOut':
      include ($_SERVER['DOCUMENT_ROOT'].'/login.php');
      break;
  
