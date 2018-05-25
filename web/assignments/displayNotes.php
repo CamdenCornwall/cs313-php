@@ -30,6 +30,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
 //Go through each result
     if(empty($row)){
         session_destroy();
+        session_start();
         $_SESSION['message'] = 'That Username is unrecognized try again.';
         header('location: ../login.php'); 
     }
