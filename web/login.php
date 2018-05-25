@@ -8,8 +8,8 @@ and open the template in the editor.
 session_start();
 if (isset($_POST['Submit'])) {
         $_SESSION['uname'] = $_POST['uname'];
-        echo 'Totally Logged IN';
-            include('/assignments/index.php?action=proOne');
+        $youareloggedin = true;
+            header('location: \assignments\displayNotes.php');
     }
 else {//echo 'Not Logged in......';
 }
