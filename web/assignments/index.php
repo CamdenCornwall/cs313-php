@@ -4,9 +4,9 @@
 * INDEX of ASSIGMNETS!!!!!!!!!!!!!!!!!!!!!
 */
 session_start();
-//require_once '../connecttoSQL.php';
-//
-//connect();
+require_once '../connecttoSQL.php';
+
+$db = connect();
 
 
  $action = filter_input(INPUT_POST, 'action');
@@ -29,6 +29,9 @@ if($action == NULL){
 }
 if($action == NULL){
  $action = 'BOM';
+}
+if($action == NULL){
+ $action = 'proOne';
 }
 }
 
@@ -53,6 +56,10 @@ switch ($action) {
      case 'BOM':
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/accessDBscriptures.php');
      break; 
+ 
+    case 'proOne':
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/displayNotes.php');
+     break;
 //     case 'shop':
 //     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/index.php');
 //     break;
