@@ -11,8 +11,8 @@
 <h1>Scripture Resources</h1>
 
 <?php
-//require_once '../connecttoSQL.php';
-//$db = connect();
+require_once '../connecttoSQL.php';
+$db = connect();
 
 $statement = $db->prepare("SELECT book, chapter, verse, content FROM scriptures");
 $statement->execute();
