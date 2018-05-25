@@ -13,7 +13,7 @@
 <?php include("../HeadandFoot/header.php"); ?>
 <div>
     <main>
-        <h1>My Notes!</h1>
+        <h1><u>My Notes!</u></h1>
 
 <?php
 //Make Connection
@@ -32,10 +32,10 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         echo '<textarea rows="25" cols="50">';
 	echo $row['notes'];
 	echo '</textarea>';
-        echo '</main>';
+        //echo '</main>';
 }
 ?>
-
+    </main>
 </div>
         <br><br>        
 <?php include("../HeadandFoot/footer.php"); ?>
