@@ -4,9 +4,9 @@
 * INDEX of ASSIGMNETS!!!!!!!!!!!!!!!!!!!!!
 */
 session_start();
-require_once '../connecttoSQL.php';
+//require_once '../connecttoSQL.php';
 //
-connect();
+//connect();
 
 
  $action = filter_input(INPUT_POST, 'action');
