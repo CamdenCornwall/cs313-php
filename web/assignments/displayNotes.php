@@ -30,7 +30,7 @@ $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-    if($row['name'] == NULL){
+    if($row['name'] == ''){
         header('location: ../login.php');
         $message = 'That Username is unrecognized try again.';
     }
