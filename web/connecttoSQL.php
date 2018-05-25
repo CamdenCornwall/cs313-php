@@ -11,7 +11,7 @@ try {
     $conn_string = "host=$server dbname=$database user=$user password=$password";
     $dbconn4 = pg_connect($conn_string);
     //$acmeLink = new PDO($dsn, $user, $password, $options);
-    //echo 'Connection worked';
+    echo 'Connection worked';
     return $dbconn4;
 } catch (PDOException $ex) {
 	// If this were in production, you would not want to echo

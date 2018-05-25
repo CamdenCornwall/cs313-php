@@ -3,7 +3,7 @@
 /**
 * INDEX of ASSIGMNETS!!!!!!!!!!!!!!!!!!!!!
 */
-
+session_start();
 require_once '../connecttoSQL.php';
 //
 //connect();
