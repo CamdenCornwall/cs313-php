@@ -29,7 +29,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	// row, and we can access the different values based on their
 	// name
 	echo '<h3>' . $row['name'] . "'s Notes!" . '</h3>';
-        echo '<p>';
+        echo '<textarea rows="100" cols="200">';
 	echo $row['notes'];
 	echo '</p>';
         echo '</main>';
