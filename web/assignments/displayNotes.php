@@ -16,11 +16,13 @@
         <h1><u>My Notes!</u></h1>
 
 <?php
+session_start();
 //Make Connection
 require_once '../connecttoSQL.php';
 $db = connect();
 //Get user
 $uname = $_SESSION['uname'];
+echo $uname;
 //Draw Data Base
 //$statement = $db->prepare("SELECT name, notes FROM my_notes");
 $statement = $db->prepare("SELECT name, notes FROM my_notes WHERE name = $uname");
