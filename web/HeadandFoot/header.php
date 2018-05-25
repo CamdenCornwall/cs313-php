@@ -7,6 +7,7 @@
         <a href="/index.php?action=home" title="Back to Home">Home</a>
         <a href="/index.php?action=assignm" title="">Assignments</a>
         <?php
+        session_start();
         if(empty($_SESSION['uname']) && $youareloggedin == false){
         echo '<a href="/index.php?action=LogIn" title="">Log In</a>';
         }
