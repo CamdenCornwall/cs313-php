@@ -33,6 +33,9 @@ if($action == NULL){
 if($action == NULL){
  $action = 'proOne';
 }
+if($action == NULL){
+ $action = 'BOM06';
+}
 }
 
 switch ($action) {
@@ -59,6 +62,10 @@ switch ($action) {
  
     case 'proOne':
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/displayNotes.php');
+     break;
+ 
+    case 'BOM06':
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/accessDBscriptures2.php');
      break;
 //     case 'shop':
 //     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/index.php');
