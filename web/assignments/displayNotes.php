@@ -31,19 +31,20 @@ $statementP = $db->prepare("SELECT pass FROM my_notes WHERE name = '$username'")
 $statementP->execute();
 $elPaso = $statementP->fetch(PDO::FETCH_ASSOC);
 $row = $statementU->fetch(PDO::FETCH_ASSOC);
-//Go through each result
-    if(empty($row)){
-        session_destroy();
-        session_start();
-        $_SESSION['message'] = 'Please provide a valid username.';
-        header('location: ../login.php'); 
-    }
+
     if(empty($elPaso)){
         session_destroy();
         session_start();
         $_SESSION['message'] = 'Please provide a valid password.';
         header('location: ../login.php'); 
     }
+    else if(empty($row)){
+        session_destroy();
+        session_start();
+        $_SESSION['message'] = 'Please provide a valid username.';
+        header('location: ../login.php'); 
+    }
+    
     else{
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
