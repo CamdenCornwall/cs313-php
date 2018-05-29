@@ -32,7 +32,7 @@ $statementP->execute();
 $elPaso = $statementP->fetch(PDO::FETCH_ASSOC);
 $row = $statementU->fetch(PDO::FETCH_ASSOC);
 
-    if(empty($elPaso)){
+    if($elPaso != $row['pass']){
         session_destroy();
         session_start();
         $_SESSION['message'] = 'Please provide a valid password.';
