@@ -24,6 +24,7 @@
                 <li><a href="assignments/shoppingCart/index.php?action=xcart" title="Shopping Cart">Shopping Cart</a> 03</li>
                 <li><a href="assignments/index.php?action=BOM" title="Scripture connect to Database">Scriptures Connect</a> 04</li>
                 <li><a href="assignments/index.php?action=proOne" title="Notes Project">Notes Project</a> 05</li>
+                <li><a href="assignments/index.php?action=BOM06" title="Notes Project">Scriptures Insert</a> 06</li>
             </ul>
         </main>
         
