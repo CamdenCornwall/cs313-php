@@ -8,6 +8,7 @@ and open the template in the editor.
 session_start();
 if (isset($_POST['Submit'])) {
         $_SESSION['uname'] = $_POST['uname'];
+        $_SESSION['pass'] = $_POST['pass'];
         $youareloggedin = true;
             header('location: \assignments\displayNotes.php');
     }

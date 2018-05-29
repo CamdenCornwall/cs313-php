@@ -22,16 +22,26 @@ require_once '../connecttoSQL.php';
 $db = connect();
 //Get user
 $username = $_SESSION['uname'];
+$password = $_SESSION['pass'];
 //Draw Data Base
 //$statement = $db->prepare("SELECT name, notes FROM my_notes");
-$statement = $db->prepare("SELECT * FROM my_notes WHERE name = '$username'");
-$statement->execute();
-$row = $statement->fetch(PDO::FETCH_ASSOC);
+$statementU = $db->prepare("SELECT * FROM my_notes WHERE name = '$username'");
+$statementU->execute();
+$statementP = $db->prepare("SELECT pass FROM my_notes WHERE name = '$username'");
+$statementP->execute();
+$elPaso = $statementP->fetch(PDO::FETCH_ASSOC);
+$row = $statementU->fetch(PDO::FETCH_ASSOC);
 //Go through each result
     if(empty($row)){
         session_destroy();
         session_start();
-        $_SESSION['message'] = 'That Username is unrecognized try again.';
+        $_SESSION['message'] = 'Please provide a valid username.';
+        header('location: ../login.php'); 
+    }
+    if(empty($elPaso)){
+        session_destroy();
+        session_start();
+        $_SESSION['message'] = 'Please provide a valid password.';
         header('location: ../login.php'); 
     }
     else{
