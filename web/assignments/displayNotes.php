@@ -27,7 +27,7 @@ $password = $_SESSION['pass'];
 //$statement = $db->prepare("SELECT name, notes FROM my_notes");
 $statementU = $db->prepare("SELECT * FROM my_notes WHERE name = '$username'");
 $statementU->execute();
-$statementP = $db->prepare("SELECT pass FROM my_notes WHERE name = '$username'");
+$statementP = $db->prepare("SELECT pass FROM my_notes WHERE pass = '$password'");
 $statementP->execute();
 $elPaso = $statementP->fetch(PDO::FETCH_ASSOC);
 $row = $statementU->fetch(PDO::FETCH_ASSOC);
