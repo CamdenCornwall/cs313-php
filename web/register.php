@@ -14,9 +14,9 @@ echo 'Hello';
     $sql = "INSERT INTO my_notes (name, pass) VALUES (:uname, :passw)";
     $statement = $db->prepare($sql);
 echo 'This';
-   $stmt->bindValue(':uname', $unameit, PDO::PARAM_STR);
-   $stmt->bindValue(':passw', $passit, PDO::PARAM_STR);
-    $statement->execute();
+   $statement->bindValue(':uname', $unameit, PDO::PARAM_STR);
+   $statement->bindValue(':passw', $passit, PDO::PARAM_STR);
+   $statement->execute();
 
 echo 'This far?';
 $_SESSION['message'] = 'Sign in with your new account!';
