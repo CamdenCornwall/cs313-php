@@ -13,7 +13,7 @@ echo 'Hello';
     $statement = $db->prepare($sql);
 echo 'This';
    $stmt->bindValue(':uname', $unameit, PDO::PARAM_STR);
-   $stmt->bindValue(':pasw', $passit, PDO::PARAM_STR);
+   $stmt->bindValue(':passw', $passit, PDO::PARAM_STR);
     $statement->execute();
         $unameit = $_POST['uname'];
         $passit = $_POST['pass'];
