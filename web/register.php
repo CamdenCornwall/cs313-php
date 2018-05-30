@@ -6,6 +6,7 @@ and open the template in the editor.
 -->
 <?php
 session_start();
+require_once 'connecttoSQL.php';
 $db = connect();
 if (isset($_POST['CreateACC'])) {
     
