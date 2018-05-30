@@ -47,13 +47,14 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
     
     else{
         $yournotes = $row['notes'];
-        $_SESSION['yournotes'] = $yournotes; 
+        $_SESSION['yournotes'] = $yournotes;
+        $keepNotes = '<?php if(isset($_POST["upNotes"])){echo "value=$_POST['.'"upNotes"'.']";} ?>';
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
         echo '<form method="POST">';
 	echo '<div id="nameSucc"><div id="notesName">' . $row['name'] . "'s Notes!" . '</div><div id="updatetext">'. $_SESSION['didupdate'] .'</div></div>';
-        echo '<textarea rows="25" cols="50" name="yournotes" <?php if(isset($_POST["upNotes"])){echo "value=$_POST['.'"upNotes"'.']";} ?>';
+        echo '<textarea rows="25" cols="50" name="yournotes" '.$keepNotes.' >';
 	echo $row['notes'];
 	echo '</textarea>';
         echo '<br><br><input type="submit" name="upNotes" value="Update Notes"></form>';
