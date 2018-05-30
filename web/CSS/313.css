@@ -58,8 +58,10 @@ ul li a {
     color: #cceecc;
     font-size: 1.1em;
 }
-#notesName{
+#nameSucc{
     display: inline;
+}
+#notesName{
     font-size: 1.17em;
     margin-top: 1em;
     margin-bottom: 1em;
