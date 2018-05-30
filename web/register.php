@@ -9,10 +9,12 @@ session_start();
 $db = connect();
 if (isset($_POST['CreateACC'])) {
 echo 'Hello';        
-    $sql = "INSERT INTO my_notes (name, pass) VALUES ('$unameit', '$passit')";
-$statement = $db->prepare($sql);
+    $sql = "INSERT INTO my_notes (name, pass) VALUES (:uname, :passw)";
+    $statement = $db->prepare($sql);
 echo 'This';
-$statement->execute();
+   $stmt->bindValue(':uname', $unameit, PDO::PARAM_STR);
+   $stmt->bindValue(':pasw', $passit, PDO::PARAM_STR);
+    $statement->execute();
         $unameit = $_POST['uname'];
         $passit = $_POST['pass'];
 echo 'This far?';
