@@ -48,7 +48,6 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
     else{
         $yournotes = $row['notes'];
         $_SESSION['yournotes'] = $yournotes;
-        if(isset($_POST["upNotes"])){$keepNotes = 'value=$_POST["upNotes"]';}
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
@@ -61,6 +60,7 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
     }
 ////////////////////////////////////////////////UPDATE NOTES/////////  
 //$didupdate = '';
+if(isset($_POST["upNotes"])){$keepNotes = 'value=$_POST["upNotes"]';}
 if (isset($_POST['upNotes'])) {
     $newnotes = $_POST['yournotes'];
     $id = $row['id'];
