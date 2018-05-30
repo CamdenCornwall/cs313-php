@@ -11,14 +11,20 @@ if (isset($_POST['CreateACC'])) {
 //        $_POST['uname'];
 //        $_POST['pass'];
 echo 'Hello';        
-   $sql = 'INSERT INTO my_notes (name, pass) VALUES (:uname, :passw)';
+   $sql = 'INSERT INTO my_notes (name, pass) VALUES (:uname, :passw)';//////////////////////////////////////////////////////////////////////////////////////
    $statement = $db->prepare($sql);
 echo "HELL";
    $statement->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
    $statement->bindValue(':passw', $_POST['pass'], PDO::PARAM_STR);
 echo "OOO";
-   $statement->execute();
-echo 'This far?';
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+   $statement->execute();////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+   echo 'This far?';
 $_SESSION['message'] = 'Sign in with your new account!';
 echo 'This far?...';
 header('location: \login.php');
