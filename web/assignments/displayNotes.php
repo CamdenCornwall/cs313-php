@@ -52,7 +52,7 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	// row, and we can access the different values based on their
 	// name
         echo '<form method="POST">';
-	echo '<h3>' . $row['name'] . "'s Notes!" . '</h3>';
+	echo '<h3>' . $row['name'] . "'s Notes!" . '</h3><h4>'. $didupdate .'</h4>';
         echo '<textarea rows="25" cols="50" name="yournotes">';
 	echo $row['notes'];
 	echo '</textarea>';
@@ -65,8 +65,9 @@ if (isset($_POST['upNotes'])) {
     $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
     $statementX->execute();
         header('location: \assignments\displayNotes.php');
+        exit;
     }
-else {echo 'Did not upload......';
+else {//echo 'Did not upload......';
 }
         
 ?>  
