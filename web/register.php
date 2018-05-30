@@ -8,7 +8,7 @@ and open the template in the editor.
 session_start();
 $db = connect();
 if (isset($_POST['CreateACC'])) {
-        $unameit =  $_POST['uname'];
+        $unameit = $_POST['uname'];
         $passit = $_POST['pass'];
 $statement = $db->prepare("INSERT INTO my_notes (name, pass) VALUES ('$unameit', '$passit')");
 echo 'This';
