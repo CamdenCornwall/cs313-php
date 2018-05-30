@@ -44,7 +44,6 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
         $_SESSION['message'] = 'Please provide a valid username.';
         header('location: ../login.php'); 
     }
-if(isset($_POST["upNotes"])){$keepNotes = 'value=$_POST["upNotes"]';}
 
         $yournotes = $row['notes'];
         $_SESSION['yournotes'] = $yournotes;
@@ -53,7 +52,7 @@ if(isset($_POST["upNotes"])){$keepNotes = 'value=$_POST["upNotes"]';}
 	// name
         echo '<form method="POST">';
 	echo '<div id="nameSucc"><div id="notesName">' . $row['name'] . "'s Notes!" . '</div><div id="updatetext">'. $_SESSION['didupdate'] .'</div></div>';
-        echo '<textarea rows="25" cols="50" name="yournotes" '.$keepNotes.' >';
+        echo '<textarea rows="25" cols="50" name="yournotes" value="<?php echo $keepNotes;?>">';
 	echo $row['notes'];
 	echo '</textarea>';
         echo '<br><br><input type="submit" name="upNotes" value="Update Notes"></form>';
