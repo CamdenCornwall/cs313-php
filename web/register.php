@@ -11,7 +11,7 @@ if (isset($_POST['CreateACC'])) {
         $unameit = $_POST['uname'];
         $passit = $_POST['pass'];
 echo 'Hello';        
-    $sql = "INSERT INTO my_notes (name, pass) VALUES (:uname, :passw)";
+    $sql = 'INSERT INTO my_notes (name, pass) VALUES (:uname, :passw)';
     $statement = $db->prepare($sql);
 echo 'This';
    $statement->bindValue(':uname', $unameit, PDO::PARAM_STR);
