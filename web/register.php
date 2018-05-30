@@ -27,7 +27,7 @@ else {//echo 'Not Logged in......';
 ?>
 <html>
     <head>
-        <title>Log In</title>
+        <title>Register an Account</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -40,10 +40,10 @@ else {//echo 'Not Logged in......';
         <main>
             <?php echo $_SESSION['message']; ?>
             <form method="POST">
-                <label for="uname"><h3>Username</h3></label>
+                <label for="uname"><h3>New Username</h3></label>
                 <input type="text" placeholder="Enter Username" name="uname" required <?php if(isset($unameit)){echo "value='$unameit'";} ?>>
                 <br>
-                <label for="pass"><h3>Password</h3></label>
+                <label for="pass"><h3>New Password</h3></label>
                 <input type="password" placeholder="Enter Password" name="pass" required>
                 <br><br>
                 <input type="submit" name="Submit" value='Register'/>
