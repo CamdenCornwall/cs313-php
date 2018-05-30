@@ -20,6 +20,9 @@ if($action == NULL){
  $action = 'assignm';
 }
 if($action == NULL){
+ $action = 'Regis';
+}
+if($action == NULL){
  $action = 'LogIn';
 }
 if($action == NULL){
@@ -38,7 +41,9 @@ break;
   case 'assignm':
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/index.php');
      break;
- 
+    case 'Regis':
+     include ($_SERVER['DOCUMENT_ROOT'].'/register.php');
+     break;
    case 'LogIn':
      include ($_SERVER['DOCUMENT_ROOT'].'/login.php');
      break;

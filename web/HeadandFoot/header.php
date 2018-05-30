@@ -9,6 +9,7 @@
         <?php
         session_start();
         if(empty($_SESSION['uname']) && $youareloggedin == false){
+        echo '<a href="/index.php?action=Regis" title="">Register</a>';  
         echo '<a href="/index.php?action=LogIn" title="">Log In</a>';
         }
         else{
