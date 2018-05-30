@@ -18,13 +18,10 @@ if (isset($_POST['CreateACC'])) {
   if(empty($matchEmail)){
 
   } else {
-    //return 1;
-      echo "Match found";
-      exit;
-      
+      $_SESSION['message'] = 'Sign in with your new account!';
   }
        
-   $sql = 'INSERT INTO my_notes (id, name, pass, notes) VALUES (4, :uname, :passw, NULL)';//////////////////////////////////////////////////////////////////////////////////////
+   $sql = 'INSERT INTO my_notes (id, name, pass, notes) VALUES (DEFAULT, :uname, :passw, NULL)';//////////////////////////////////////////////////////////////////////////////////////
    $statement = $db->prepare($sql);
 
    $statement->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
