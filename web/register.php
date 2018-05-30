@@ -8,14 +8,13 @@ and open the template in the editor.
 session_start();
 if (isset($_POST['Submit'])) {
 $db = connect();
+$statement = $db->prepare("INSERT INTO my_notes (name, pass, notes) VALUES ($username, $password, 'Welcome to your notes')");
+$statement->execute();
 //Get user
 $username = $_SESSION['uname'];
 $password = $_SESSION['pass'];
 //Draw Data Base
 //$statement = $db->prepare("SELECT name, notes FROM my_notes");
-$statementU = $db->prepare("INSERT INTO my_notes (name, pass, notes) VALUES ($username, $password, 'Welcome to your notes')");
-$statementU->execute();
-
         $_SESSION['uname'] = $_POST['uname'];
         $unameit = $_SESSION['uname'];
         $_SESSION['pass'] = $_POST['pass'];
