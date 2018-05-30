@@ -16,6 +16,7 @@ echo 'Hello';
 echo "HELL";
    $statement->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
    $statement->bindValue(':passw', $_POST['pass'], PDO::PARAM_STR);
+echo "OOO";
    $statement->execute();
 echo 'This far?';
 $_SESSION['message'] = 'Sign in with your new account!';
