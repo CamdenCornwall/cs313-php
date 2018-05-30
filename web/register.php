@@ -8,25 +8,35 @@ and open the template in the editor.
 session_start();
 $db = connect();
 if (isset($_POST['CreateACC'])) {
-//        $_POST['uname'];
-//        $_POST['pass'];
-echo 'Hello';        
+    
+  $sql = 'SELECT name FROM my_notes WHERE name = :uname';
+  $stmt = $db->prepare($sql);
+  $stmt->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
+  $stmt->execute();
+  $matchEmail = $stmt->fetch(PDO::FETCH_NUM);
+  $stmt->closeCursor();
+  if(empty($matchEmail)){
+
+  } else {
+    return 1;
+      echo "Match found";
+      exit;
+      
+  }
+       
    $sql = 'INSERT INTO my_notes (id, name, pass, notes) VALUES (4, :uname, :passw, NULL)';//////////////////////////////////////////////////////////////////////////////////////
    $statement = $db->prepare($sql);
-echo "HELL";
+
    $statement->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
    $statement->bindValue(':passw', $_POST['pass'], PDO::PARAM_STR);
-echo "OOO";
-
+   
    $statement->execute();////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-   echo 'This far?';
 $_SESSION['message'] = 'Sign in with your new account!';
-echo 'This far?...';
+
 header('location: \login.php');
-echo 'This far?............';
     }
-else {echo 'Failed to Register...';
+else {//echo 'Failed to Register...';
 }
 ?>
 <html>
