@@ -16,6 +16,7 @@ if (isset($_POST['upNotes'])) {
          $newnotes = $_POST['yournotes'];
          $id = $row['id'];
          $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
+         $statementX->execute();
             header('location: \assignments\displayNotes.php');
     }
 else {//echo 'Not Logged in......';
