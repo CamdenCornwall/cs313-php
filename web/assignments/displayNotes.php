@@ -52,7 +52,7 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	// row, and we can access the different values based on their
 	// name
         echo '<form method="POST">';
-	echo '<h3>' . $row['name'] . "'s Notes!" . '</h3><h4>'. $_SESSION['didupdate'] .'</h4>';
+	echo '<h3>' . $row['name'] . "'s Notes!" . '</h3><div>'. $_SESSION['didupdate'] .'</div>';
         echo '<textarea rows="25" cols="50" name="yournotes">';
 	echo $row['notes'];
 	echo '</textarea>';
