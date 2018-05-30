@@ -8,6 +8,8 @@ and open the template in the editor.
 session_start();
 $db = connect();
 if (isset($_POST['CreateACC'])) {
+        $unameit = $_POST['uname'];
+        $passit = $_POST['pass'];
 echo 'Hello';        
     $sql = "INSERT INTO my_notes (name, pass) VALUES (:uname, :passw)";
     $statement = $db->prepare($sql);
@@ -15,8 +17,7 @@ echo 'This';
    $stmt->bindValue(':uname', $unameit, PDO::PARAM_STR);
    $stmt->bindValue(':passw', $passit, PDO::PARAM_STR);
     $statement->execute();
-        $unameit = $_POST['uname'];
-        $passit = $_POST['pass'];
+
 echo 'This far?';
 $_SESSION['message'] = 'Sign in with your new account!';
 echo 'This far?...';
