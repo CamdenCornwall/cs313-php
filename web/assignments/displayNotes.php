@@ -11,17 +11,6 @@
     </head>
     <body>
 <?php include("../HeadandFoot/header.php"); ?>
-<?php
-if (isset($_POST['upNotes'])) {
-         $newnotes = $_POST['yournotes'];
-         $id = $row['id'];
-         $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
-         $statementX->execute();
-            header('location: \assignments\displayNotes.php');
-    }
-else {//echo 'Not Logged in......';
-}
-?>
 <div>
     <main>
         <h1><u>My Notes!</u></h1>
@@ -69,6 +58,16 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	echo '</textarea>';
         echo '</form>';
     }
+////////////////////////////////////////////////UPDATE NOTES/////////  
+if (isset($_POST['upNotes'])) {
+    $newnotes = $_POST['yournotes'];
+    $id = $row['id'];
+    $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
+    $statementX->execute();
+        header('location: \assignments\displayNotes.php');
+    }
+else {echo 'Did not upload......';
+}
         
 ?>  
         <br>

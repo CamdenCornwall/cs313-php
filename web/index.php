@@ -45,10 +45,7 @@ break;
     case 'LogOut':
      include ($_SERVER['DOCUMENT_ROOT'].'/logout.php');
      break;
-    case 'upNotes':
-     updateText();
-     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/displayNotes.php');
-     break;
+
  
 }
 
