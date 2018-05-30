@@ -11,6 +11,16 @@
     </head>
     <body>
 <?php include("../HeadandFoot/header.php"); ?>
+<?php
+if (isset($_POST['upNotes'])) {
+         $newnotes = $_POST['yournotes'];
+         $id = $row['id'];
+         $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
+            header('location: \assignments\displayNotes.php');
+    }
+else {//echo 'Not Logged in......';
+}
+?>
 <div>
     <main>
         <h1><u>My Notes!</u></h1>
@@ -51,14 +61,17 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
+        echo '<form method="POST">';
 	echo '<h3>' . $row['name'] . "'s Notes!" . '</h3>';
         echo '<textarea rows="25" cols="50" name="yournotes">';
 	echo $row['notes'];
 	echo '</textarea>';
+        echo '</form>';
     }
         
 ?>  
-    <a href="/index.php?action=upNotes" title="">Update Notes</a>
+        <br>
+    <input type="submit" name="upNotes" value='Update Notes'/>
     </main>
     
 </div>
