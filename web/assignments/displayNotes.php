@@ -56,24 +56,24 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
         echo '<textarea rows="25" cols="50" name="yournotes">';
 	echo $row['notes'];
 	echo '</textarea>';
-        //echo '</form>';
+        echo '<br><input type="submit" name="upNotes" value="Update Notes"></form>';
     }
 ////////////////////////////////////////////////UPDATE NOTES/////////  
+$didupdate = '';
 if (isset($_POST['upNotes'])) {
     $newnotes = $_POST['yournotes'];
     $id = $row['id'];
     $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
     $statementX->execute();
+        $didupdate = 'Notes successfully updated!';
         header('location: \assignments\displayNotes.php');
         exit;
     }
-else {//echo 'Did not upload......';
+else {$didupdate = 'Notes failed to update.';
 }
         
 ?>  
-        <br>
-    <input type="submit" name="upNotes" value='Update Notes'>
-    </form>
+    
     </main>
     
 </div>
