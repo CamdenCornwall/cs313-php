@@ -7,13 +7,17 @@ and open the template in the editor.
 <?php
 session_start();
 $db = connect();
-if (isset($_POST['Submit'])) {
+if (isset($_POST['CreateACC'])) {
         $unameit =  $_POST['uname'];
         $passit = $_POST['pass'];
 $statement = $db->prepare("INSERT INTO my_notes (name, pass, notes) VALUES ('$unameit', '$passit', 'Welcome to your notes')");
+echo 'This';
 $statement->execute();
+echo 'This far?';
 $_SESSION['message'] = 'Sign in with your new account!';
+echo 'This far?...';
 header('location: \login.php');
+echo 'This far?............';
     }
 else {echo 'Failed to Register...';
 }
@@ -39,7 +43,7 @@ else {echo 'Failed to Register...';
                 <label for="pass"><h3>New Password</h3></label>
                 <input type="password" placeholder="Enter Password" name="pass" required>
                 <br><br>
-                <input type="submit" name="Submit" value='Register'/>
+                <input type="submit" name="CreateACC" value='Register'/>
                 <!--<input type="hidden" name="action" value="LoggedIn">-->
             </form>
             <br><br>
