@@ -8,7 +8,9 @@ and open the template in the editor.
 session_start();
 if (isset($_POST['Submit'])) {
         $_SESSION['uname'] = $_POST['uname'];
+        $unameit = $_SESSION['uname'];
         $_SESSION['pass'] = $_POST['pass'];
+        $passit = $_SESSION['pass'];
         $youareloggedin = true;
             header('location: \assignments\displayNotes.php');
     }
@@ -31,7 +33,7 @@ else {//echo 'Not Logged in......';
             <?php echo $_SESSION['message']; ?>
             <form method="POST">
                 <label for="uname"><h3>Username</h3></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <input type="text" placeholder="Enter Username" name="uname" required <?php if(isset($unameit)){echo "value='$unameit'";} ?>>
                 <br>
                 <label for="pass"><h3>Password</h3></label>
                 <input type="password" placeholder="Enter Password" name="pass" required>
