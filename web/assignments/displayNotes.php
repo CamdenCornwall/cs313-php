@@ -46,17 +46,21 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
     }
     
     else{
+        $yournotes = $row['notes'];
+        $_SESSION['yournotes'] = $yournotes; 
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
 	echo '<h3>' . $row['name'] . "'s Notes!" . '</h3>';
-        echo '<textarea rows="25" cols="50">';
+        echo '<textarea rows="25" cols="50" name="yournotes">';
 	echo $row['notes'];
 	echo '</textarea>';
     }
-        //echo '</main>'
-?>
+        
+?>  
+    <a href="/index.php?action=upNotes" title="">Update Notes</a>
     </main>
+    
 </div>
         <br><br>        
 <?php include("../HeadandFoot/footer.php"); ?>
