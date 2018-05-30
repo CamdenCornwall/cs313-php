@@ -44,8 +44,8 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
         $_SESSION['message'] = 'Please provide a valid username.';
         header('location: ../login.php'); 
     }
-    
-    else{
+if(isset($_POST["upNotes"])){$keepNotes = 'value=$_POST["upNotes"]';}
+
         $yournotes = $row['notes'];
         $_SESSION['yournotes'] = $yournotes;
 	// The variable "row" now holds the complete record for that
@@ -57,10 +57,10 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	echo $row['notes'];
 	echo '</textarea>';
         echo '<br><br><input type="submit" name="upNotes" value="Update Notes"></form>';
-    }
+
 ////////////////////////////////////////////////UPDATE NOTES/////////  
 //$didupdate = '';
-if(isset($_POST["upNotes"])){$keepNotes = 'value=$_POST["upNotes"]';}
+
 if (isset($_POST['upNotes'])) {
     $newnotes = $_POST['yournotes'];
     $id = $row['id'];
