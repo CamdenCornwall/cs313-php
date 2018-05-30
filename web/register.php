@@ -19,7 +19,7 @@ echo 'This';
    $statement->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
    $statement->bindValue(':passw', $_POST['pass'], PDO::PARAM_STR);
    $statement->execute();
-
+   $statement->closeCursor();
 echo 'This far?';
 $_SESSION['message'] = 'Sign in with your new account!';
 echo 'This far?...';
