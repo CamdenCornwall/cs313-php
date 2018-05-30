@@ -10,7 +10,7 @@ $db = connect();
 if (isset($_POST['Submit'])) {
         $unameit =  $_POST['uname'];
         $passit = $_POST['pass'];
-$statement = $db->prepare("INSERT INTO my_notes (name, pass, notes) VALUES ($unameit, $passit, 'Welcome to your notes')");
+$statement = $db->prepare("INSERT INTO my_notes (name, pass, notes) VALUES ('$unameit', '$passit', 'Welcome to your notes')");
 $statement->execute();
 $_SESSION['message'] = 'Sign in with your new account!';
 header('location: \login.php');
