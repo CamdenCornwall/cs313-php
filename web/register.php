@@ -6,8 +6,8 @@ and open the template in the editor.
 -->
 <?php
 session_start();
-if (isset($_POST['Submit'])) {
 $db = connect();
+if (isset($_POST['Submit'])) {
 $statement = $db->prepare("INSERT INTO my_notes (name, pass, notes) VALUES ($username, $password, 'Welcome to your notes')");
 $statement->execute();
 $_SESSION['message'] = 'Sign in with your new account!';
