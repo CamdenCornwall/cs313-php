@@ -71,6 +71,9 @@ if (isset($_POST['upNotes'])) {
         header('location: \assignments\displayNotes.php');
         exit;
     }
+else if(!defined($_POST['upNotes'])){$didupdate = '';
+        $_SESSION['didupdate'] = $didupdate;
+}
 else {$didupdate = 'Notes failed to update.';
         $_SESSION['didupdate'] = $didupdate;   
 }
