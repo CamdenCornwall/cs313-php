@@ -45,8 +45,8 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
         header('location: ../login.php'); 
     }
 
-        $yournotes = $row['notes'];
-        $_SESSION['yournotes'] = $yournotes;
+        $_SESSION['yournotes'] = $row['notes'];
+        $yournotes = $_SESSION['yournotes'];
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
