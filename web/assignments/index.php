@@ -68,11 +68,7 @@ switch ($action) {
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/accessDBscriptures2.php');
      break;
  
- 
-    case 'upNotes':
-     updateText();
-     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/displayNotes.php');
-     break;
+
 //     case 'shop':
 //     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/shoppingCart/index.php');
 //     break;
