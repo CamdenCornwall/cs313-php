@@ -65,8 +65,8 @@ if (isset($_POST['upNotes'])) {
     $id = $row['id'];
     $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
     $statementX->execute();
-        $didupdate = 'Notes successfully updated!';
         header('location: \assignments\displayNotes.php');
+        $didupdate = 'Notes successfully updated!';
         exit;
     }
 else {$didupdate = 'Notes failed to update.';
