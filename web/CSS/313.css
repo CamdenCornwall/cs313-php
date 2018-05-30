@@ -59,6 +59,7 @@ ul li a {
     font-size: 1.1em;
 }
 #notesName{
+    display: inline;
     font-size: 1.17em;
     margin-top: 1em;
     margin-bottom: 1em;
