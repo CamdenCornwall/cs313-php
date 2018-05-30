@@ -59,10 +59,9 @@ ul li a {
     font-size: 1.1em;
 }
 #nameSucc{
-    display: inline;
+    display: flex;
 }
 #notesName{
-    float: left;
     font-size: 1.17em;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -71,7 +70,11 @@ ul li a {
     font-weight: bold;
 }
 #updatetext{
-
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 0;
 }
 
 
