@@ -48,7 +48,7 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
     else{
         $yournotes = $row['notes'];
         $_SESSION['yournotes'] = $yournotes;
-        $keepNotes = '<?php if(isset($_POST["upNotes"])){echo "value=$_POST['.'"upNotes"'.']";} ?>';
+        if(isset($_POST["upNotes"])){$keepNotes = 'value=$_POST["upNotes"]';}
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
