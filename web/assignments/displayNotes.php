@@ -59,7 +59,7 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
         echo '<br><input type="submit" name="upNotes" value="Update Notes"></form>';
     }
 ////////////////////////////////////////////////UPDATE NOTES/////////  
-$didupdate = '';
+//$didupdate = '';
 if (isset($_POST['upNotes'])) {
     $newnotes = $_POST['yournotes'];
     $id = $row['id'];
