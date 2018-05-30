@@ -52,7 +52,8 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	// name
         echo '<form method="POST">';
 	echo '<div id="nameSucc"><div id="notesName">' . $row['name'] . "'s Notes!" . '</div><div id="updatetext">'. $_SESSION['didupdate'] .'</div></div>';
-        echo '<textarea rows="25" cols="50" name="yournotes" value="<?php echo $yournotes;?>">';
+        echo '<textarea rows="25" cols="50" name="yournotes">';
+        echo $yournotes;
 	//echo $row['notes'];
 	echo '</textarea>';
         echo '<br><br><input type="submit" name="upNotes" value="Update Notes"></form>';
