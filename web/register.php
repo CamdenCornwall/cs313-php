@@ -15,7 +15,7 @@ $statement->execute();
 $_SESSION['message'] = 'Sign in with your new account!';
 header('location: \login.php');
     }
-else {//echo 'Not Logged in......';
+else {echo 'Failed to Register...';
 }
 ?>
 <html>
