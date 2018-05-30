@@ -56,7 +56,7 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
         echo '<textarea rows="25" cols="50" name="yournotes">';
 	echo $row['notes'];
 	echo '</textarea>';
-        echo '</form>';
+        //echo '</form>';
     }
 ////////////////////////////////////////////////UPDATE NOTES/////////  
 if (isset($_POST['upNotes'])) {
@@ -71,7 +71,8 @@ else {echo 'Did not upload......';
         
 ?>  
         <br>
-    <input type="submit" name="upNotes" value='Update Notes'/>
+    <input type="submit" name="upNotes" value='Update Notes'>
+    </form>
     </main>
     
 </div>
