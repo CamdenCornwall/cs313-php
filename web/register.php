@@ -15,13 +15,10 @@ if (isset($_POST['CreateACC'])) {
   $stmt->execute();
   $matchEmail = $stmt->fetch(PDO::FETCH_NUM);
   $stmt->closeCursor();
-  if(empty($matchEmail)){
-
-  } else {
-      $_SESSION['message'] = 'Sign in with your new account!';
-  }
-       
-   $sql = 'INSERT INTO my_notes (id, name, pass, notes) VALUES (DEFAULT, :uname, :passw, NULL)';//////////////////////////////////////////////////////////////////////////////////////
+  
+    if(empty($matchEmail)){
+      
+    $sql = 'INSERT INTO my_notes (id, name, pass, notes) VALUES (DEFAULT, :uname, :passw, NULL)';//////////////////////////////////////////////////////////////////////////////////////
    $statement = $db->prepare($sql);
 
    $statement->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
@@ -32,6 +29,13 @@ if (isset($_POST['CreateACC'])) {
 $_SESSION['message'] = 'Sign in with your new account!';
 
 header('location: \login.php');
+} 
+    else {
+      $_SESSION['message'] = 'Sign in with your new account!';
+      header('location: \register.php');
+  }
+       
+
     }
 else {//echo 'Failed to Register...';
 }
