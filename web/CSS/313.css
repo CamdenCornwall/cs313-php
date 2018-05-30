@@ -58,7 +58,9 @@ ul li a {
     color: #cceecc;
     font-size: 1.1em;
 }
-
+#updatetext{
+    display: inline;
+}
 
 
 #footer {
