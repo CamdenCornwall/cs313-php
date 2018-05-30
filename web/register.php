@@ -27,7 +27,7 @@ if (isset($_POST['CreateACC'])) {
    
    $statement->execute();////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-$_SESSION['message'] = 'Sign in with your new account!';
+$_SESSION['message'] = 'Thank you for registering! Please sign in with your new account';
 header('location: \login.php');
 } 
     else {
