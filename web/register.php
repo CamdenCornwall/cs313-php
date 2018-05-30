@@ -8,14 +8,13 @@ and open the template in the editor.
 session_start();
 $db = connect();
 if (isset($_POST['CreateACC'])) {
-echo 'Hello';
-        $unameit = $_POST['uname'];
-        $passit = $_POST['pass'];
-echo 'Does';        
+echo 'Hello';        
     $sql = "INSERT INTO my_notes (name, pass) VALUES ('$unameit', '$passit')";
 $statement = $db->prepare($sql);
 echo 'This';
 $statement->execute();
+        $unameit = $_POST['uname'];
+        $passit = $_POST['pass'];
 echo 'This far?';
 $_SESSION['message'] = 'Sign in with your new account!';
 echo 'This far?...';
