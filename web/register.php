@@ -18,7 +18,7 @@ if (isset($_POST['CreateACC'])) {
   if(empty($matchEmail)){
 
   } else {
-    return 1;
+    //return 1;
       echo "Match found";
       exit;
       
