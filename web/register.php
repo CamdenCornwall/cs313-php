@@ -11,15 +11,15 @@ if (isset($_POST['CreateACC'])) {
 //        $_POST['uname'];
 //        $_POST['pass'];
 echo 'Hello';        
-    $sql = 'INSERT INTO my_notes (name, pass) VALUES (:uname, :passw)';
-    $sql = 'INSERT INTO my_notes (name, pass)
-           VALUES (:uname, :passw)';
-    $statement = $db->prepare($sql);
-echo 'This';
+   $sql = 'INSERT INTO my_notes (name, pass) VALUES (:uname, :passw)';
+   $statement = $db->prepare($sql);
    $statement->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
    $statement->bindValue(':passw', $_POST['pass'], PDO::PARAM_STR);
    $statement->execute();
    $statement->closeCursor();
+if ($db->connect_error) {
+        die("Connection failed: " . $db->connect_error);
+    }
 echo 'This far?';
 $_SESSION['message'] = 'Sign in with your new account!';
 echo 'This far?...';
