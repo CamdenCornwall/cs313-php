@@ -58,8 +58,11 @@ ul li a {
     color: #cceecc;
     font-size: 1.1em;
 }
+#notesName{
+    display: inline-block;
+}
 #updatetext{
-    display: inline;
+
 }
 
 
