@@ -10,7 +10,8 @@ $db = connect();
 if (isset($_POST['CreateACC'])) {
         $unameit = $_POST['uname'];
         $passit = $_POST['pass'];
-$statement = $db->prepare("INSERT INTO my_notes (name, pass) VALUES ('$unameit', '$passit')");
+    $sql = "INSERT INTO my_notes (name, pass) VALUES ('$unameit', '$passit')";
+$statement = $db->prepare($sql);
 echo 'This';
 $statement->execute();
 echo 'This far?';
