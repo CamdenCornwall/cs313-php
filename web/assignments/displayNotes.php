@@ -57,7 +57,7 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
         echo '<textarea rows="25" cols="50" name="yournotes" '.$keepNotes.' >';
 	echo $row['notes'];
 	echo '</textarea>';
-        echo '<br><br><input type="submit" name="upNotes" value="Update Notes"></form>';
+        echo '<br><br><input type="submit" name="upNotes" value="Update Notes"><input type="submit" name="saveNotes" value="Save Notes"></form>';
     }
 ////////////////////////////////////////////////UPDATE NOTES/////////  
 //$didupdate = '';
@@ -69,12 +69,20 @@ if (isset($_POST['upNotes'])) {
         $didupdate = 'Notes successfully updated!';
         $_SESSION['didupdate'] = $didupdate;
         header('location: \assignments\displayNotes.php');
-        
         exit;
     }
 else {$didupdate = 'Notes failed to update.';
-        $_SESSION['didupdate'] = $didupdate;
+        $_SESSION['didupdate'] = $didupdate;   
 }
+////////////////////SAVE NOTES//////////////////////////
+if (isset($_POST['saveNotes'])) {
+        $_SESSION['yournotes'] = $_POST['yournotes'];
+        $didupdate = 'Notes saved.';
+        $_SESSION['didupdate'] = $didupdate;
+        exit;
+    }
+else{$didupdate = 'Notes failed to save.';
+     $_SESSION['didupdate'] = $didupdate;}
         
 ?>  
     
