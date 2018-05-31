@@ -47,8 +47,8 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	// name
         echo '<form method="POST">';
 	echo '<div id="nameSucc"><div id="notesName">Are you sure? ' . $row['name'] . "'s notes will all be lost" . '</div></div>';
-        echo '<a href="/index.php?action=delete" title="">Confirm Delete</a>';
-        echo '<a href="/index.php?action=cancelDel" title="">Cancel</a>';
+        echo '<a href="/index.php?action=delete" title="">Confirm Delete</a><br><br>';
+        echo '<a href="assignments/index.php?action=proOne" title="Back to Notes">Cancel</a>';
 
 
 ////////////////////////////////////////////////UPDATE NOTES/////////  

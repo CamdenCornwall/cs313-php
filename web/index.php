@@ -60,12 +60,7 @@ break;
   case 'delete':
      include ($_SERVER['DOCUMENT_ROOT'].'/delete.php');
      break;
- 
- case 'cancelDel':
-     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/index.php?action=proOne');
-     break;
 
- 
 }
 
 ?>

@@ -31,7 +31,7 @@ $_SESSION['message'] = 'Thank you for registering! Please sign in with your new 
 header('location: \login.php');
 } 
     else {
-      $_SESSION['message'] = 'That account is already taken';
+      $_SESSION['message'] = 'That account name is already taken, please try another';
       header('location: \register.php');
   }
        
