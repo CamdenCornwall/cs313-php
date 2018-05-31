@@ -9,12 +9,13 @@
          
          <link href="../CSS/313.css" rel="stylesheet" type="text/css"/>
     </head>
+
+    
     <body>
 <?php include("../HeadandFoot/header.php"); ?>
 <div>
     <main>
         <h1><u>My Notes!</u></h1>
-
 <?php
 session_start();
 //Make Connection
@@ -50,6 +51,7 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	// name
         echo '<form method="POST">';
 	echo '<div id="nameSucc"><div id="notesName">' . $row['name'] . "'s Notes!" . '</div><div id="updatetext">'. $_SESSION['didupdate'] .'</div></div>';
+        echo '<button onclick="delAcc()">Delete Account</button>';
         echo '<textarea rows="25" cols="50" name="yournotes">';
 	echo $row['notes'];
 	echo '</textarea>';
