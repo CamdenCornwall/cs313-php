@@ -12,6 +12,7 @@
         $row = $statementU->fetch(PDO::FETCH_ASSOC);
         $id = $row['id'];
         $statementD = $db->prepare("DELETE FROM my_notes WHERE id = '$id'");
+        $statementD->execute();
         
         session_destroy();
         $_SESSION = array();
