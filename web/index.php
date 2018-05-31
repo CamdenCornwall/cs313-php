@@ -45,9 +45,11 @@ break;
      include ($_SERVER['DOCUMENT_ROOT'].'/assignments/index.php');
      break;
     case 'Regis':
+        $_SESSION['message'] = '';
      include ($_SERVER['DOCUMENT_ROOT'].'/register.php');
      break;
    case 'LogIn':
+       $_SESSION['message'] = '';
      include ($_SERVER['DOCUMENT_ROOT'].'/login.php');
      break;
     case 'LogOut':
@@ -55,9 +57,11 @@ break;
      break;
  
  case 'deleteAcc':
+     $_SESSION['message'] = '';
      include ($_SERVER['DOCUMENT_ROOT'].'/confirmDel.php');
      break;
   case 'delete':
+      $_SESSION['message'] = '';
      include ($_SERVER['DOCUMENT_ROOT'].'/delete.php');
      break;
 
