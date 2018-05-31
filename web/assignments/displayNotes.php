@@ -73,12 +73,12 @@ if (isset($_POST['upNotes'])) {
     }
 
     else {
-        if ($sent == false){
+        if (!isset($_POST['upNotes'])){
         $didupdate = 'Notes failed to update.';
         $_SESSION['didupdate'] = $didupdate;}
     
-        $didupdate = '';
-        $_SESSION['didupdate'] = $didupdate; 
+        else{$didupdate = '';
+        $_SESSION['didupdate'] = $didupdate;}
 }
 
         
