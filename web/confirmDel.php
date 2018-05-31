@@ -45,11 +45,11 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
-        echo '<form method="POST">';
+        echo '<form>';
 	echo '<div id="nameSucc"><div id="notesName">Are you sure? ' . $row['name'] . "'s notes will all be lost" . '</div></div>';
         echo '<a href="/index.php?action=delete" title="">Confirm Delete</a><br><br>';
         echo '<a href="assignments/index.php?action=proOne" title="Back to Notes">Cancel</a>';
-
+        echo '</form>';
 
 ////////////////////////////////////////////////UPDATE NOTES/////////  
 //$didupdate = '';
