@@ -7,17 +7,17 @@
         
          <link rel="icon" href="http://d8dt.com/favicon.ico" type="image/x-icon" />
          
-         <link href="../CSS/313.css" rel="stylesheet" type="text/css"/>
+         <link href="CSS/313.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-<?php include("../HeadandFoot/header.php"); ?>
+<?php include("HeadandFoot/header.php"); ?>
 <div>
     <main>
         <h1><u>Delete this account?</u></h1>
 <?php
 session_start();
 //Make Connection
-require_once '../connecttoSQL.php';
+require_once 'connecttoSQL.php';
 $db = connect();
 //Get user
 $username = $_SESSION['uname'];
@@ -34,12 +34,12 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
     if(empty($elPaso)){
         session_destroy();
         session_start();
-        header('location: ../login.php'); 
+        header('location: login.php'); 
     }
     else if(empty($row)){
         session_destroy();
         session_start();
-        header('location: ../login.php'); 
+        header('location: login.php'); 
     }
 
 	// The variable "row" now holds the complete record for that
