@@ -76,6 +76,12 @@ ul li a {
     margin-left: 1em;
     margin-right: 0;
 }
+form a {
+    color: red;
+}
+form a:visited {
+    color: green;
+}
 
 
 #footer {
