@@ -49,7 +49,7 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	// name
         echo '<form method="POST">';
 	echo '<div id="nameSucc"><div id="notesName">' . $row['name'] . "'s Notes!" . '</div><div id="updatetext">'. $_SESSION['didupdate'] .'</div></div>';
-        echo '<a href="/index.php?action=deleteAcc" title="">Delete Account</a><br>';
+        echo '<a href="/index.php?action=deleteAcc" title="">Delete Account</a><br><br>';
         echo '<textarea rows="25" cols="50" name="yournotes">';
 	echo $row['notes'];
 	echo '</textarea>';

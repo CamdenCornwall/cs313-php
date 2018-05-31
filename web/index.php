@@ -58,11 +58,11 @@ break;
      include ($_SERVER['DOCUMENT_ROOT'].'/confirmDel.php');
      break;
   case 'delete':
-     include ($_SERVER['DOCUMENT_ROOT'].'/confirmDel.php');
+     include ($_SERVER['DOCUMENT_ROOT'].'/delete.php');
      break;
  
  case 'cancelDel':
-     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/displayNotes.php');
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/index.php?action=proOne');
      break;
 
  
