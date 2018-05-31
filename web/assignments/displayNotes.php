@@ -57,7 +57,8 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 
 ////////////////////////////////////////////////UPDATE NOTES/////////  
 //$didupdate = '';
-if (isset($_POST['upNotes'])) {
+$sent = true;
+if (isset($_POST['upNotes']) && $sent == true):
     $newnotes = $_POST['yournotes'];
     $id = $row['id'];
     $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
@@ -65,14 +66,19 @@ if (isset($_POST['upNotes'])) {
     $rowsChanged = $statementX->rowCount();
     if($rowsChanged){ $didupdate = 'Notes successfully updated!';
         $_SESSION['didupdate'] = $didupdate;}
-    else {$didupdate = 'Notes failed to update.';
-        $_SESSION['didupdate'] = $didupdate;}
+//    else {$didupdate = 'Notes failed to update.';
+//        $_SESSION['didupdate'] = $didupdate;}
         header('location: \assignments\displayNotes.php');
         exit;
-    }
-else {$didupdate = '';
+
+$sent = false;
+elseif ($sent == false):
+    $didupdate = 'Notes failed to update.';
+    $_SESSION['didupdate'] = $didupdate;
+    
+else: $didupdate = '';
         $_SESSION['didupdate'] = $didupdate; 
-}
+
 
         
 ?>  
