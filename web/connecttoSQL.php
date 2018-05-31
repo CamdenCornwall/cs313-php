@@ -34,6 +34,17 @@ try {
 }
 }
 
+
+function delAcc() {
+    if (confirm("Are you sure you want to delete this account? All information will be lost.")) {
+        alert("I am an alert box! OK");
+    } else {
+        alert("I am an alert box! NO");
+    }
+
+}
+
+
 //function updateText(){
 //    $db = connect();
 //    $sql = 'UPDATE my_notes SET notes =:yournotes WHERE name=:username';
