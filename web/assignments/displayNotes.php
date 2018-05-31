@@ -62,12 +62,15 @@ if (isset($_POST['upNotes'])) {
     $id = $row['id'];
     $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
     $statementX->execute();
-        $didupdate = 'Notes successfully updated!';
-        $_SESSION['didupdate'] = $didupdate;
+    $rowsChanged = $statementX->rowCount();
+    if($rowsChanged){ $didupdate = 'Notes successfully updated!';
+        $_SESSION['didupdate'] = $didupdate;}
+    else {$didupdate = 'Notes failed to update.';
+        $_SESSION['didupdate'] = $didupdate;}
         header('location: \assignments\displayNotes.php');
         exit;
     }
-else {$didupdate = 'Notes failed to update.';
+else {$didupdate = '';
         $_SESSION['didupdate'] = $didupdate; 
 }
 
