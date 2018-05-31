@@ -28,6 +28,9 @@ if($action == NULL){
 if($action == NULL){
  $action = 'LogOut';
 }
+if($action == NULL){
+ $action = 'deleteAcc';
+}
 
 
 }
@@ -49,6 +52,17 @@ break;
      break;
     case 'LogOut':
      include ($_SERVER['DOCUMENT_ROOT'].'/logout.php');
+     break;
+ 
+ case 'deleteAcc':
+     include ($_SERVER['DOCUMENT_ROOT'].'/confirmDel.php');
+     break;
+  case 'delete':
+     include ($_SERVER['DOCUMENT_ROOT'].'/confirmDel.php');
+     break;
+ 
+ case 'cancelDel':
+     include ($_SERVER['DOCUMENT_ROOT'].'/assignments/displayNotes.php');
      break;
 
  

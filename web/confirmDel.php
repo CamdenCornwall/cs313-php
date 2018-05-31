@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Notes!</title>
+        <title>Are you sure?</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -13,7 +13,7 @@
 <?php include("../HeadandFoot/header.php"); ?>
 <div>
     <main>
-        <h1><u>My Notes!</u></h1>
+        <h1><u>Delete this account?</u></h1>
 <?php
 session_start();
 //Make Connection
@@ -34,13 +34,11 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
     if(empty($elPaso)){
         session_destroy();
         session_start();
-        $_SESSION['message'] = 'Please provide a valid password.';
         header('location: ../login.php'); 
     }
     else if(empty($row)){
         session_destroy();
         session_start();
-        $_SESSION['message'] = 'Please provide a valid username.';
         header('location: ../login.php'); 
     }
 
@@ -48,12 +46,10 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 	// row, and we can access the different values based on their
 	// name
         echo '<form method="POST">';
-	echo '<div id="nameSucc"><div id="notesName">' . $row['name'] . "'s Notes!" . '</div><div id="updatetext">'. $_SESSION['didupdate'] .'</div></div>';
-        echo '<a href="/index.php?action=deleteAcc" title="">Delete Account</a>';
-        echo '<textarea rows="25" cols="50" name="yournotes">';
-	echo $row['notes'];
-	echo '</textarea>';
-        echo '<br><br><input type="submit" name="upNotes" value="Update Notes"></form>';
+	echo '<div id="nameSucc"><div id="notesName">Are you sure? ' . $row['name'] . "'s notes will all be lost" . '</div></div>';
+        echo '<a href="/index.php?action=delete" title="">Confirm Delete</a>';
+        echo '<a href="/index.php?action=cancelDel" title="">Cancel</a>';
+
 
 ////////////////////////////////////////////////UPDATE NOTES/////////  
 //$didupdate = '';
