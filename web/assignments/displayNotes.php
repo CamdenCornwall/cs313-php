@@ -57,8 +57,8 @@ $row = $statementU->fetch(PDO::FETCH_ASSOC);
 
 ////////////////////////////////////////////////UPDATE NOTES/////////  
 //$didupdate = '';
-$sent = true;
-if (isset($_POST['upNotes']) && $sent == true) {
+
+if (isset($_POST['upNotes'])) {
     $newnotes = $_POST['yournotes'];
     $id = $row['id'];
     $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
@@ -71,7 +71,7 @@ if (isset($_POST['upNotes']) && $sent == true) {
         header('location: \assignments\displayNotes.php');
         exit;
     }
-$sent = false;
+
     else {
         if ($sent == false){
         $didupdate = 'Notes failed to update.';
