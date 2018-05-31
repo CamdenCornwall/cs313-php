@@ -30,8 +30,10 @@ else {//echo 'Not Logged in......';
     <body>
         <?php include("HeadandFoot/header.php"); ?>
         <main>
+            <h1><u>Login</u></h1>
             <?php echo $_SESSION['message']; ?>
             <form method="POST">
+                
                 <label for="uname"><h3>Username</h3></label>
                 <input type="text" placeholder="Enter Username" name="uname" required <?php if(isset($unameit)){echo "value='$unameit'";} ?>>
                 <br>

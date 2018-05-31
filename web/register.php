@@ -53,6 +53,7 @@ else {//echo 'Failed to Register...';
     <body>
         <?php include("HeadandFoot/header.php"); ?>
         <main>
+            <h1><u>Create Account</u></h1>
             <?php echo $_SESSION['message']; ?>
             <form method="POST">
                 <label for="uname"><h3>New Username</h3></label>
