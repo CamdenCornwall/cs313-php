@@ -24,9 +24,13 @@ $username = $_SESSION['uname'];
 $password = $_SESSION['pass'];
 //Draw Data Base
 //$statement = $db->prepare("SELECT name, notes FROM my_notes");
-$statementU = $db->prepare("SELECT * FROM my_notes WHERE name = '$username'");
+$sqlU = "SELECT * FROM my_notes WHERE name = ':username'";
+$sqlP = "SELECT pass FROM my_notes WHERE pass = ':password'";
+$statementU = $db->prepare( $sqlU );
+$statementU->bindValue(':username', $username, PDO::PARAM_STR);
 $statementU->execute();
-$statementP = $db->prepare("SELECT pass FROM my_notes WHERE pass = '$password'");
+$statementP = $db->prepare( $sqlP );
+$statementU->bindValue(':password', $password, PDO::PARAM_STR);
 $statementP->execute();
 $elPaso = $statementP->fetch(PDO::FETCH_ASSOC);
 $row = $statementU->fetch(PDO::FETCH_ASSOC);
