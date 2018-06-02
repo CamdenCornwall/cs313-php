@@ -30,7 +30,7 @@ $statementU = $db->prepare( $sqlU );
 $statementU->bindValue(':username', $username, PDO::PARAM_STR);
 $statementU->execute();
 $statementP = $db->prepare( $sqlP );
-$statementU->bindValue(':password', $password, PDO::PARAM_STR);
+$statementP->bindValue(':password', $password, PDO::PARAM_STR);
 $statementP->execute();
 $elPaso = $statementP->fetch(PDO::FETCH_ASSOC);
 $row = $statementU->fetch(PDO::FETCH_ASSOC);
