@@ -25,19 +25,26 @@ $password = $_SESSION['pass'];
 //Draw Data Base
 //$statement = $db->prepare("SELECT name, notes FROM my_notes");
 $sqlU = "SELECT * FROM my_notes WHERE name = :username";
-$sqlP = "SELECT pass FROM my_notes WHERE pass = :password";
+//$sqlP = "SELECT pass FROM my_notes WHERE pass = :password";
 
 $statementU = $db->prepare( $sqlU );
 $statementU->bindValue(':username', $username, PDO::PARAM_STR);
 $statementU->execute();
-$statementP = $db->prepare( $sqlP );
-$statementP->bindValue(':password', $password, PDO::PARAM_STR);
-$statementP->execute();
+//$statementP = $db->prepare( $sqlP );
+//$statementP->bindValue(':password', $password, PDO::PARAM_STR);
+//$statementP->execute();
 
-$elPaso = $statementP->fetch(PDO::FETCH_ASSOC);
+//$elPaso = $statementP->fetch(PDO::FETCH_ASSOC);
 $row = $statementU->fetch(PDO::FETCH_ASSOC);
+$hashedPassFRM_DB = $row['pass'];
 
-    if(empty($elPaso)){
+    if(empty($hashedPassFRM_DB)){
+        session_destroy();
+        session_start();
+        $_SESSION['message'] = 'Please provide a valid password.';
+        header('location: ../login.php'); 
+    }
+    else if(password_verify($password,$hashedPassFRM_DB)){
         session_destroy();
         session_start();
         $_SESSION['message'] = 'Please provide a valid password.';
