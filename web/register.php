@@ -9,7 +9,7 @@ session_start();
 require_once 'connecttoSQL.php';
 $db = connect();
 if (isset($_POST['CreateACC'])) {
-    
+  ///Check for Username Matches 
   $sql = 'SELECT name FROM my_notes WHERE name = :uname';
   $stmt = $db->prepare($sql);
   $stmt->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
@@ -18,12 +18,14 @@ if (isset($_POST['CreateACC'])) {
   $stmt->closeCursor();
   
     if(empty($matchEmail)){
-      
-    $sql = 'INSERT INTO my_notes (id, name, pass, notes) VALUES (DEFAULT, :uname, :passw, NULL)';//////////////////////////////////////////////////////////////////////////////////////
+  ///If no user name matches, hash the password   
+   $hashedPassword = password_hash($_POST['pass'], PASSWORD_DEFAULT);     
+        
+   $sql = 'INSERT INTO my_notes (id, name, pass, notes) VALUES (DEFAULT, :uname, :passw, NULL)';//////////////////////////////////////////////////////////////////////////////////////
    $statement = $db->prepare($sql);
 
    $statement->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
-   $statement->bindValue(':passw', $_POST['pass'], PDO::PARAM_STR);
+   $statement->bindValue(':passw', $hashedPassword, PDO::PARAM_STR);
    
    $statement->execute();////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
