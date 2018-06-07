@@ -47,7 +47,7 @@ $hashedPassFRM_DB = $row['pass'];
     else if(password_verify($password,$hashedPassFRM_DB)){
         session_destroy();
         session_start();
-        $_SESSION['message'] = 'Please provide a valid password.';
+        $_SESSION['message'] = 'That password was incorrect.';
         header('location: ../login.php'); 
     }
     else if(empty($row)){
