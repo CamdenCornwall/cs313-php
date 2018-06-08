@@ -77,7 +77,9 @@ $hashedPassFRM_DB = $row['pass'];
 if (isset($_POST['upNotes'])) {
     $newnotes = $_POST['yournotes'];
     $id = $row['id'];
-    $statementX = $db->prepare("UPDATE my_notes SET notes = '$newnotes' WHERE id = '$id'");
+    $statementX = $db->prepare("UPDATE my_notes SET notes = :newnotes WHERE id = :id");
+    $statementX->bindValue(':newnotes', $newnotes, PDO::PARAM_STR);
+    $statementX->bindValue(':id', $id, PDO::PARAM_STR);
     $statementX->execute();
     $rowsChanged = $statementX->rowCount();
     if($rowsChanged){ $didupdate = 'Notes successfully updated!';
