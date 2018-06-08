@@ -29,9 +29,10 @@ $sqlP = "SELECT pass FROM my_notes WHERE pass = :username";
 
 $statementU = $db->prepare( $sqlU );
 $statementU->bindValue(':username', $username, PDO::PARAM_STR);
-$statementP->bindValue(':username', $username, PDO::PARAM_STR);
 $statementU->execute();
+
 $statementP = $db->prepare( $sqlP );
+$statementP->bindValue(':username', $username, PDO::PARAM_STR);
 //$statementP->bindValue(':password', $password, PDO::PARAM_STR);
 $statementP->execute();
 
