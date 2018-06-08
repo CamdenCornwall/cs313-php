@@ -20,13 +20,13 @@ if (isset($_POST['CreateACC'])) {
     if(empty($matchEmail)){
   ///If no user name matches, hash the password   
    $hashedPassword = password_hash($_POST['pass'], PASSWORD_DEFAULT);     
-        
+  ///Then create string for the new user      
    $sql = 'INSERT INTO my_notes (id, name, pass, notes) VALUES (DEFAULT, :uname, :passw, NULL)';//////////////////////////////////////////////////////////////////////////////////////
    $statement = $db->prepare($sql);
-
+   //Bind the values
    $statement->bindValue(':uname', $_POST['uname'], PDO::PARAM_STR);
    $statement->bindValue(':passw', $hashedPassword, PDO::PARAM_STR);
-   
+   //Run the SQL to create the user
    $statement->execute();////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 $_SESSION['message'] = 'Thank you for registering! Please sign in with your new account';
